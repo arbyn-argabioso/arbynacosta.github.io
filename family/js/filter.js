@@ -10,6 +10,7 @@
 /** Preprocess constants **/
 
 let QUERY = Utils.getURLParam('q');
+let LIKENESS_THRESHOLD = 0.66;
 
 function addHighlightPath(annotations, color, items, line_width, line_type)
 {
@@ -82,8 +83,34 @@ function filterTree(query, tree)
     }
   }
 
+  // Get direct matches, the spouse of that direct match, and its parents
+  let likenessCount = {};
+  let highestLikeness = 0;
+  for (let i = 0, imax = tree.length; i < imax; i++) {
+    let item = tree[i];
+    let likeness = Utils.isQueryInNode(query, item);
+
+    if (likenessCount[likeness] == undefined) {
+      likenessCount[likeness] = [item.id];
+    } else {
+      likenessCount[likeness].push(item.id);
+    }
+
+    if (highestLikeness < likeness) {
+      highestLikeness = likeness;
+    }
+  }
+
+  // Just don't even bother if the highest likeness doesn't reach 50%
+  if (highestLikeness < LIKENESS_THRESHOLD) {
+    return {
+      tree: [],
+      annotations: annotations,
+    };
+  }
+
   let mainQuery = false;
-  let directNodeIds = [];
+  let directNodeIds = likenessCount[highestLikeness];
   let parentNodeIds = [];
   let siblingNodeIds = [];
   let spouseNodeIds = [];
@@ -91,21 +118,15 @@ function filterTree(query, tree)
   let isImportantFound = false;
 
   // Get direct matches, the spouse of that direct match, and its parents
-  for (let i = 0, imax = tree.length; i < imax; i++) {
-    let item = tree[i];
+  console.log('Highest likeness:', highestLikeness);
+  console.log('Direct nodes found:', directNodeIds);
+  for (let i = 0, imax = directNodeIds.length; i < imax; i++) {
+    let id = directNodeIds[i];
+    let item = Utils.getNode(id, tree);
 
-    let firstname = item.name.first ? item.name.first.toLowerCase() : '';
-    let nickname = item.name.nick[0] ? item.name.nick[0].toLowerCase() : '';
-    let middlename = item.name.middle ? item.name.middle.toLowerCase() : '';
-    let lastname = item.name.last ? item.name.last.toLowerCase() : '';
-
-    if (Utils.isQueryInNode(query, item)) {
-      directNodeIds.push(item.id);
-
-      parentNodeIds = parentNodeIds.concat(item.parents);
-      siblingNodeIds = siblingNodeIds.concat(item.siblings);
-      spouseNodeIds = spouseNodeIds.concat(item.spouses);
-    }
+    parentNodeIds = parentNodeIds.concat(item.parents);
+    siblingNodeIds = siblingNodeIds.concat(item.siblings);
+    spouseNodeIds = spouseNodeIds.concat(item.spouses);
   }
 
   annotations = [];

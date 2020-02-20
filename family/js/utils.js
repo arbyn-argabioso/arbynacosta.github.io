@@ -45,7 +45,7 @@ const Utils = {
     // Try the modern URLSearchParams first
     let result = null;
     if (paramValue !== null && paramValue !== undefined) {
-      result = paramValue.toLowerCase();
+      return paramValue.trimStart().trimEnd().replace(/\s\s+/g, ' ');
     }
 
     // Use regex on location.href if URLSearchParams is not supported
@@ -54,10 +54,8 @@ const Utils = {
       return null;
     }
     else {
-      result = decodeURI(paramValue[1]).toLowerCase();
+      return decodeURI(paramValue[1]).trimStart().trimEnd().replace(/\s\s+/g, ' ');
     }
-
-    return result.trimStart().trimEnd().replace(/\s\s+/g, ' ');
   },
 
   /*
@@ -149,19 +147,19 @@ const Utils = {
 
     let IntQuery = parseInt(query);
     if (Number.isInteger(IntQuery)) {
-      return node.id === IntQuery
+      return node.id === IntQuery ? 1 : 0;
     }
 
-    let queryParts = query.toLowerCase().split(' ');
+    let queryParts = query.split(' ');
 
     let nameParts = [];
     for (let i = 0, imax = node.name.nick.length; i < imax; i++) {
-      nameParts.push(node.name.nick[i].toLowerCase());
+      nameParts.push(node.name.nick[i]);
     }
-    if (node.name.last) nameParts = nameParts.concat(node.name.last.toLowerCase().split(' '));
-    if (node.name.first) nameParts = nameParts.concat(node.name.first.toLowerCase().split(' '));
-    if (node.name.middle) nameParts = nameParts.concat(node.name.middle.toLowerCase().split(' '));
-    if (node.name.suffix.family) nameParts = nameParts.concat(node.name.suffix.family.toLowerCase().split(' '));
+    if (node.name.last) nameParts = nameParts.concat(node.name.last.split(' '));
+    if (node.name.first) nameParts = nameParts.concat(node.name.first.split(' '));
+    if (node.name.middle) nameParts = nameParts.concat(node.name.middle.split(' '));
+    if (node.name.suffix.family) nameParts = nameParts.concat(node.name.suffix.family.split(' '));
 
     let overallLikeness = 0;
     for (let i = 0, imax = queryParts.length; i < imax; i++) {
@@ -174,10 +172,8 @@ const Utils = {
       }
       overallLikeness += queryLikeness;
     }
-    overallLikeness /= queryParts.length;
 
-    if (overallLikeness > 0.72) console.log('Likeness threshold reached for Node(%d): %.4f', node.id, overallLikeness);
-    return (overallLikeness > 0.72);
+    return overallLikeness / queryParts.length;
   },
 
 };
