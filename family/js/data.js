@@ -1874,7 +1874,7 @@ var RAW_TREE_DATA = [
     ],
     gender: 0,
     image: {
-      id: null,
+      id: 46,
     },
   },
 
