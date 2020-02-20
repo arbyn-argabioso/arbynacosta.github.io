@@ -386,7 +386,7 @@ function treefy(tree)
 }
 
 
-result = treefy(RAW_DATA);
+result = treefy(RAW_TREE_DATA);
 result = filterTree(QUERY, result);
 
 let mainTree = result.tree;

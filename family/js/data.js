@@ -9,7 +9,7 @@
 
 /** Constants and Enums **/
 
-var RAW_DATA = [
+var RAW_TREE_DATA = [
   {
     id: 0,
     parents: [3, 2],
