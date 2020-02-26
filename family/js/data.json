@@ -1,0 +1,1302 @@
+{
+  "persons": [
+    {
+      "id": "p_999938750541",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "m6bmp58uy",
+          "type": "http://gedcomx.org/FormalName",
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Arbyn Acosta"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Argabioso"
+                }
+              ],
+              "fullText": "Arbyn Acosta Argabioso"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "mmbn0ne6r",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "04 Apr 1995"
+          },
+          "place": {
+            "original": "Chinese General Hospital and Medical Center, Manila, Metro Manila, Philippines"
+          },
+          "value": null,
+          "qualifiers": null
+        }
+      ]
+    },
+    {
+      "id": "p_999371119469",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "2sp3u4m05",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Mitchie Ajesta"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Adanza"
+                }
+              ],
+              "fullText": "Mitchie Ajesta Adanza"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "s5p7heshy",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "16 Dec 1994"
+          },
+          "place": {
+            "original": "Philippines"
+          },
+          "value": null,
+          "qualifiers": null
+        }
+      ]
+    },
+    {
+      "id": "p_99971576",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "e6hplfp6a",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Corazon Maramba"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Acosta"
+                }
+              ],
+              "fullText": "Corazon Maramba Acosta"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "kfwy9i87c",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "10 Mar 1971"
+          },
+          "place": {
+            "original": "Philippines"
+          },
+          "value": null,
+          "qualifiers": null
+        },
+        {
+          "id": "v38syrl0d",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "date": {
+            "original": "25 May 2018"
+          },
+          "place": {
+            "original": "Santa Cruz, Laguna, Philippines"
+          },
+          "qualifiers": [
+            {
+              "name": "http://gedcomx.org/Age",
+              "value": "47"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p_999257431524",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "mdirsrj86",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Rolando Saplala"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Argabioso"
+                }
+              ],
+              "fullText": "Rolando Saplala Argabioso"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "m8y2sqi4f",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "9 Oct 1966"
+          },
+          "place": {
+            "original": "Philippines"
+          },
+          "value": null,
+          "qualifiers": null
+        }
+      ]
+    },
+    {
+      "id": "p_999152533907",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "l2glahtms",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Ira Mae Acosta"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Ignacio"
+                }
+              ],
+              "fullText": "Ira Mae Acosta Ignacio"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "4rou11yqo",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "5 Aug 2004"
+          },
+          "place": {
+            "original": "Caloocan, Philippines"
+          },
+          "value": null,
+          "qualifiers": null
+        }
+      ]
+    },
+    {
+      "id": "p_999632937200",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "lze3j7ka3",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Joshua Caleb Acosta"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Ignacio"
+                }
+              ],
+              "fullText": "Joshua Caleb Acosta Ignacio"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "57nwdt0jj",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "1 Aug 2008"
+          },
+          "place": {
+            "original": "Caloocan, Philippines"
+          },
+          "value": null,
+          "qualifiers": null
+        }
+      ]
+    },
+    {
+      "id": "p_999371769592",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "tpnmfy3dn",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Larry Calilong"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Ignacio"
+                }
+              ],
+              "fullText": "Larry Calilong Ignacio"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "il2g02nbl",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "10 May 1971"
+          },
+          "place": {
+            "original": "Philippines"
+          },
+          "value": null,
+          "qualifiers": null
+        }
+      ]
+    },
+    {
+      "id": "p_999207104611",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "1g3m89sjq",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Lydia Perez"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Saplala"
+                }
+              ],
+              "fullText": "Lydia Perez Saplala"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "o72g8xbur",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "24 Nov 1944"
+          },
+          "place": {
+            "original": "Philippines"
+          },
+          "value": null,
+          "qualifiers": null
+        }
+      ]
+    },
+    {
+      "id": "p_999596614195",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "sycmbk7hf",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Riand Nikole Martin"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Argabioso"
+                }
+              ],
+              "fullText": "Riand Nikole Martin Argabioso"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "b73b49iiw",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "7 Nov 2003"
+          },
+          "place": {
+            "original": "Philippines"
+          },
+          "value": null,
+          "qualifiers": null
+        }
+      ]
+    },
+    {
+      "id": "p_999628372804",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "6xj70its0",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Marcial Mia"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Argabioso"
+                }
+              ],
+              "fullText": "Marcial Mia Argabioso"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "zxr241pqm",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "13 Sep 1932"
+          },
+          "place": {
+            "original": "Majayjay, Laguna, Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "p_999338220762",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "a6a49lzm1",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Nierene Nieves"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Martin"
+                }
+              ],
+              "fullText": "Nierene Nieves Martin"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "yskv0vw3r",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "29 Aug 1975"
+          }
+        }
+      ]
+    },
+    {
+      "id": "p_999891973277",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "gcgu7eb63",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Manuel San Agustin"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Acosta"
+                },
+                {
+                  "type": "http://gedcomx.org/Suffix",
+                  "value": "Jr"
+                }
+              ],
+              "fullText": "Manuel San Agustin Acosta Jr"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "x62cwu57g",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "6 Jul 1948"
+          },
+          "place": {
+            "original": "Manila, Metro Manila, Philippines"
+          },
+          "value": null,
+          "qualifiers": null
+        },
+        {
+          "id": "0lo7kpf02",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "date": {
+            "original": "7 Jun 1979"
+          },
+          "qualifiers": [
+            {
+              "name": "http://gedcomx.org/Age",
+              "value": "30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p_999374652833",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "jwosmz88z",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Catalina Dumantay"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Maramba"
+                }
+              ],
+              "fullText": "Catalina Dumantay Maramba"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "hi82jw3rj",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "28 Jan 1943"
+          },
+          "place": {
+            "original": "Philippines"
+          }
+        },
+        {
+          "id": "nkuacdmoc",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "date": {
+            "original": "10 Aug 1974"
+          },
+          "place": {
+            "original": "Philippines"
+          },
+          "value": null,
+          "qualifiers": [
+            {
+              "name": "http://gedcomx.org/Age",
+              "value": "31"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p_999243917436",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "231umiuz0",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Natividad Villacorta"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "San Agustin"
+                }
+              ],
+              "fullText": "Natividad Villacorta San Agustin"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "kxntcet73",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "21 Dec 1925"
+          },
+          "place": {
+            "original": "Philippines"
+          },
+          "value": null,
+          "qualifiers": null
+        },
+        {
+          "id": "ujyime4sf",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "place": {
+            "original": "Los Angeles, California, United States"
+          },
+          "date": {
+            "original": "9 Oct 2008"
+          },
+          "value": null,
+          "qualifiers": [
+            {
+              "name": "http://gedcomx.org/Age",
+              "value": "82"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p_9995941165",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "qitp4vgk3",
+          "type": null,
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Manuel Bongco"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Acosta"
+                },
+                {
+                  "type": "http://gedcomx.org/Suffix",
+                  "value": "Sr"
+                }
+              ],
+              "fullText": "Manuel Bongco Acosta Sr"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "814rc3b25",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "10 Nov 1913"
+          },
+          "place": {
+            "original": "Manila, Metro Manila, Philippines"
+          }
+        },
+        {
+          "id": "ntl0jneyg",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "date": {
+            "original": "15 Nov 1994"
+          },
+          "place": {
+            "original": "Los Angeles, California, United States"
+          },
+          "qualifiers": [
+            {
+              "name": "http://gedcomx.org/Age",
+              "value": "81"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p_999634689446",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "nif4v4fhv",
+          "type": null,
+          "nameForms": [
+            {
+              "fullText": "Ligorio Acosta",
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Ligorio"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Acosta"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "wbehg1xsu",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "1871"
+          },
+          "place": {
+            "original": "Philippines"
+          }
+        },
+        {
+          "id": "e79r20fba",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "date": {
+            "original": "7 Jul 1948"
+          },
+          "place": {
+            "original": "Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "p_99940456257",
+      "extracted": true,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "f0kza8ksu",
+          "type": null,
+          "nameForms": [
+            {
+              "fullText": "Maximiana Bongco",
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Maximiana"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Bongco"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "facts": []
+    }
+  ],
+  "relationships": [
+    {
+      "id": "wxvztbhir",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_99971576",
+        "resource": "#p_99971576"
+      },
+      "person2": {
+        "resourceId": "p_999938750541",
+        "resource": "#p_999938750541"
+      },
+      "facts": [
+        {
+          "id": "aqzd51khl",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false,
+          "place": {
+            "original": "Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gk9fmerep",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_999257431524",
+        "resource": "#p_999257431524"
+      },
+      "person2": {
+        "resourceId": "p_999938750541",
+        "resource": "#p_999938750541"
+      }
+    },
+    {
+      "id": "htgla4096",
+      "type": "http://gedcomx.org/Couple",
+      "person1": {
+        "resourceId": "p_999938750541",
+        "resource": "#p_999938750541"
+      },
+      "person2": {
+        "resourceId": "p_999371119469",
+        "resource": "#p_999371119469"
+      }
+    },
+    {
+      "id": "gsocqa0po",
+      "type": "http://familysearch.org/types/relationships/Sibling",
+      "person1": {
+        "resourceId": "p_999938750541",
+        "resource": "#p_999938750541"
+      },
+      "person2": {
+        "resourceId": "p_999152533907",
+        "resource": "#p_999152533907"
+      }
+    },
+    {
+      "id": "hhi6omcbl",
+      "type": "http://familysearch.org/types/relationships/Sibling",
+      "person1": {
+        "resourceId": "p_999938750541",
+        "resource": "#p_999938750541"
+      },
+      "person2": {
+        "resourceId": "p_999632937200",
+        "resource": "#p_999632937200"
+      }
+    },
+    {
+      "id": "6q3dpcy0g",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_99971576",
+        "resource": "#p_99971576"
+      },
+      "person2": {
+        "resourceId": "p_999152533907",
+        "resource": "#p_999152533907"
+      },
+      "facts": [
+        {
+          "id": "crtpt24kn",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false,
+          "place": {
+            "original": "Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "d5kcmup1q",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_99971576",
+        "resource": "#p_99971576"
+      },
+      "person2": {
+        "resourceId": "p_999632937200",
+        "resource": "#p_999632937200"
+      },
+      "facts": [
+        {
+          "id": "gc2q5uwx2",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false,
+          "place": {
+            "original": "Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "qeyw1mawx",
+      "type": "http://familysearch.org/types/relationships/Sibling",
+      "person1": {
+        "resourceId": "p_999938750541",
+        "resource": "#p_999938750541"
+      },
+      "person2": {
+        "resourceId": "p_999596614195",
+        "resource": "#p_999596614195"
+      }
+    },
+    {
+      "id": "hph00qlcp",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_999257431524",
+        "resource": "#p_999257431524"
+      },
+      "person2": {
+        "resourceId": "p_999596614195",
+        "resource": "#p_999596614195"
+      }
+    },
+    {
+      "id": "s9glmafy7",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_999338220762",
+        "resource": "#p_999338220762"
+      },
+      "person2": {
+        "resourceId": "p_999596614195",
+        "resource": "#p_999596614195"
+      },
+      "facts": [
+        {
+          "id": "h03uaetyo",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false,
+          "place": {
+            "original": "Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "jdq6ntsk3",
+      "type": "http://gedcomx.org/Couple",
+      "person1": {
+        "resourceId": "p_999257431524",
+        "resource": "#p_999257431524"
+      },
+      "person2": {
+        "resourceId": "p_999338220762",
+        "resource": "#p_999338220762"
+      }
+    },
+    {
+      "id": "7t7qi73iq",
+      "type": "http://gedcomx.org/Couple",
+      "person1": {
+        "resourceId": "p_99971576",
+        "resource": "#p_99971576"
+      },
+      "person2": {
+        "resourceId": "p_999371769592",
+        "resource": "#p_999371769592"
+      },
+      "facts": [
+        {
+          "id": "smmm4oqyy",
+          "type": "http://gedcomx.org/Marriage",
+          "primary": false,
+          "place": {
+            "original": "Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fbt55rnfe",
+      "type": "http://familysearch.org/types/relationships/Sibling",
+      "person1": {
+        "resourceId": "p_999152533907",
+        "resource": "#p_999152533907"
+      },
+      "person2": {
+        "resourceId": "p_999632937200",
+        "resource": "#p_999632937200"
+      }
+    },
+    {
+      "id": "ppoih9s4u",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_999371769592",
+        "resource": "#p_999371769592"
+      },
+      "person2": {
+        "resourceId": "p_999632937200",
+        "resource": "#p_999632937200"
+      },
+      "facts": [
+        {
+          "id": "lap9v8ddf",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "r2ax6qzfs",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_999371769592",
+        "resource": "#p_999371769592"
+      },
+      "person2": {
+        "resourceId": "p_999152533907",
+        "resource": "#p_999152533907"
+      },
+      "facts": [
+        {
+          "id": "gdpz8nf8q",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "dt8uffdzi",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_999628372804",
+        "resource": "#p_999628372804"
+      },
+      "person2": {
+        "resourceId": "p_999257431524",
+        "resource": "#p_999257431524"
+      },
+      "facts": [
+        {
+          "id": "r0dzv320l",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "gq19ednzw",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_999207104611",
+        "resource": "#p_999207104611"
+      },
+      "person2": {
+        "resourceId": "p_999257431524",
+        "resource": "#p_999257431524"
+      },
+      "facts": [
+        {
+          "id": "m8csza1v1",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "py2fzu277",
+      "type": "http://gedcomx.org/Couple",
+      "person1": {
+        "resourceId": "p_999207104611",
+        "resource": "#p_999207104611"
+      },
+      "person2": {
+        "resourceId": "p_999628372804",
+        "resource": "#p_999628372804"
+      },
+      "facts": [
+        {
+          "id": "q3yb1s5ql",
+          "type": "http://gedcomx.org/Marriage",
+          "primary": false,
+          "date": {
+            "original": "23 Jan 1963"
+          },
+          "place": {
+            "original": "Majayjay, Laguna, Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "288vmg4vl",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_999891973277",
+        "resource": "#p_999891973277"
+      },
+      "person2": {
+        "resourceId": "p_99971576",
+        "resource": "#p_99971576"
+      },
+      "facts": [
+        {
+          "id": "5lqv27ysb",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "9xn6x6t12",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_999374652833",
+        "resource": "#p_999374652833"
+      },
+      "person2": {
+        "resourceId": "p_99971576",
+        "resource": "#p_99971576"
+      },
+      "facts": [
+        {
+          "id": "f9c5jm4c7",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false,
+          "qualifiers": [
+            {
+              "name": "http://gedcomx.org/Age",
+              "value": "Philippines"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wbirxd23m",
+      "type": "http://gedcomx.org/Couple",
+      "person1": {
+        "resourceId": "p_999891973277",
+        "resource": "#p_999891973277"
+      },
+      "person2": {
+        "resourceId": "p_999374652833",
+        "resource": "#p_999374652833"
+      }
+    },
+    {
+      "id": "vomvnvq4r",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_999243917436",
+        "resource": "#p_999243917436"
+      },
+      "person2": {
+        "resourceId": "p_999891973277",
+        "resource": "#p_999891973277"
+      },
+      "facts": [
+        {
+          "id": "sev6ehnqz",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false,
+          "qualifiers": null,
+          "date": null,
+          "place": null,
+          "value": null
+        }
+      ]
+    },
+    {
+      "id": "3ritf6npv",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_9995941165",
+        "resource": "#p_9995941165"
+      },
+      "person2": {
+        "resourceId": "p_999891973277",
+        "resource": "#p_999891973277"
+      },
+      "facts": [
+        {
+          "id": "lb5wrpt1f",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "8hqq6i5ih",
+      "type": "http://gedcomx.org/Couple",
+      "person1": {
+        "resourceId": "p_9995941165",
+        "resource": "#p_9995941165"
+      },
+      "person2": {
+        "resourceId": "p_999243917436",
+        "resource": "#p_999243917436"
+      },
+      "facts": [
+        {
+          "id": "pn7tw1jgg",
+          "type": "http://gedcomx.org/Marriage",
+          "primary": false,
+          "date": {
+            "original": "5 Mar 1951"
+          },
+          "place": {
+            "original": "Tondo, Manila, Philippines"
+          },
+          "qualifiers": [
+            {
+              "name": "http://gedcomx.org/Age",
+              "value": "Philippines"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2v259b0ew",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_999634689446",
+        "resource": "#p_999634689446"
+      },
+      "person2": {
+        "resourceId": "p_9995941165",
+        "resource": "#p_9995941165"
+      }
+    },
+    {
+      "id": "pt0aq4n15",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "p_99940456257",
+        "resource": "#p_99940456257"
+      },
+      "person2": {
+        "resourceId": "p_9995941165",
+        "resource": "#p_9995941165"
+      }
+    },
+    {
+      "id": "q9cxjfcmc",
+      "type": "http://gedcomx.org/Couple",
+      "person1": {
+        "resourceId": "p_999634689446",
+        "resource": "#p_999634689446"
+      },
+      "person2": {
+        "resourceId": "p_99940456257",
+        "resource": "#p_99940456257"
+      }
+    }
+  ]
+}
