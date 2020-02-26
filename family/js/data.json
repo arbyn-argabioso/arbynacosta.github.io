@@ -822,7 +822,13 @@
           ]
         }
       ],
-      "facts": []
+      "facts": [
+        {
+          "id": "6etd7r8kf",
+          "type": "http://gedcomx.org/Death",
+          "primary": false
+        }
+      ]
     }
   ],
   "relationships": [
