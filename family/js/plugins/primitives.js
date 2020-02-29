@@ -23409,7 +23409,7 @@ primitives.orgdiagram.BaseControl = function (element, options, taskManagerFacto
 
     layout.scrollPanel.addEventListener('keydown', onKeyDown);
     layout.scrollPanel.addEventListener('scroll', onScroll);
-    if (_data.options.enablePanning) {
+    if (_data.options.enablePanning && primitives.common.isChrome()) {
       layout.scrollPanel.draggable = true;
       layout.scrollPanel.addEventListener('dragstart', onDragStart);
       layout.scrollPanel.addEventListener('drag', onDragScroll);
