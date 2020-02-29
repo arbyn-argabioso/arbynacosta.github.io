@@ -3,150 +3,144 @@
  * template.js
  * Arbyn Acosta Copyright 2020
  *
- * Defines the template used by tree to generate each node.
+ * Defines the template used by tree to generate each item.
  *
  * Dependencies:
  *   - jquery.js
- *   - styles.js
+ *   - configs.js
  *
  * ===================================================================== */
 
-const Class = {
+/** Constants and Enums **/
 
-  /** Constants and Enums **/
+const loc = window.location.pathname;
+const url = loc.substring(0, loc.lastIndexOf('/')) + (loc.includes('.html') ? '/index.html' : '');
 
-  NODE: 'tree-node',
+const classes = {
+  item: 'tree-item',
 
-  IMG_WRAPPER: 'node-img-container',
-  IMG: 'node-img',
+  imgWrapper: 'item-img-container',
+  img: 'item-img',
 
-  DETAILS_WRAPPER: 'node-details-container',
-  DETAILS: 'node-details',
-  FULLNAME: 'fullname',
-  LIFE_RANGE: 'life',
+  detailsWrapper: 'item-details-container',
+  details: 'item-details',
+  displayname: 'displayname',
+  liferange: 'liferange',
 };
 
-const Template = {
+const template = function()
+{
+  'use strict';
 
-  /** Constants and Enums **/
+  let result = new primitives.famdiagram.TemplateConfig();
 
-  NAME: 'TreeNodeTemplate',
+  result.name = 'TreeItemTemplate';
+  result.isActive = false;
+  result.itemSize = new primitives.common.Size(style.item.width, style.item.height);
+  result.minimizedItemSize = new primitives.common.Size(style.dot.width, style.dot.height);
 
-  /** Functions **/
-
-  /**
-   *
-   * Returns the template to be used for each node of the family tree.
-   *
-   */
-  get: function()
-  {
-    'use strict';
-
-    let result = new primitives.famdiagram.TemplateConfig();
-
-    result.name = this.NAME;
-    result.isActive = false;
-    result.itemSize = new primitives.common.Size(Measure.Node.WIDTH, Measure.Node.HEIGHT);
-    result.minimizedItemSize = new primitives.common.Size(Measure.Dot.WIDTH, Measure.Dot.HEIGHT);
-
-    result.itemTemplate = [
-      'a', {
-        'class': [Class.NODE],
+  result.itemTemplate = [
+    'a', {
+      'class': [classes.item],
+      'style': {
+        'height': result.itemSize.height + 'px',
+        'width': result.itemSize.width + 'px',
+      },
+    },
+    [
+      'div', {
+        'class': [classes.imgWrapper],
         'style': {
-          'height': result.itemSize.height + 'px',
-          'width': result.itemSize.width + 'px'
+          'height': result.itemSize.width + 'px',
         },
       },
       [
-        'div', {
-          'class': [Class.IMG_WRAPPER],
+        'figure', {
+          'name': classes.img,
+          'class': [classes.img],
           'style': {
             'height': result.itemSize.width + 'px',
-          }
-        },
-        [
-          'figure', {
-            'name': Class.IMG,
-            'class': [Class.IMG],
-            'style': {
-              'height': result.itemSize.width + 'px',
-            }
           },
-        ],
+        },
       ],
+    ],
+    [
+      'div', {
+        'class': [classes.details],
+        'style': {
+          'height': (result.itemSize.height - result.itemSize.width) + 'px',
+        }
+      },
       [
         'div', {
-          'class': [Class.DETAILS],
+          'class': [classes.detailsWrapper],
           'style': {
             'height': (result.itemSize.height - result.itemSize.width) + 'px',
-          }
+            'width': result.itemSize.width + 'px'
+          },
         },
         [
           'div', {
-            'class': [Class.DETAILS_WRAPPER],
-            'style': {
-              'height': (result.itemSize.height - result.itemSize.width) + 'px',
-              'width': result.itemSize.width + 'px'
-            },
+            'name': classes.displayname,
+            'class': [classes.displayname]
           },
-          [
-            'div', {
-              'name': Class.FULLNAME,
-              'class': [Class.FULLNAME]
-            }
-          ],
-          [
-            'div', {
-              'name': Class.LIFE_RANGE,
-              'class': [Class.LIFE_RANGE]
-            }
-          ]
-        ]
-      ]
-    ];
+        ],
+        [
+          'div', {
+            'name': classes.liferange,
+            'class': [classes.liferange]
+          },
+        ],
+      ],
+    ],
+  ];
 
-    return result;
-  },
-
-  render: function(event, data)
+  result.render = function(event, data)
   {
     'use strict';
 
-    let cfg = data.context;
-    let item = $(data.element);
+    let item = data.context;
+    let itemElement = $(data.element);
 
-    // Iterate through each child of details container and fetch the values from the data
-    let nodeDetails = item.children('.' + Class.DETAILS);
-    let nodeDetailsChildren = nodeDetails.children('.' + Class.DETAILS_WRAPPER).children();
-    nodeDetailsChildren.each(function() {
-      let cfgName = $(this).attr('name');
-      $(this).text(cfg[cfgName]);
-    });
+    // Preprocesses
+    item.displayname = getDisplayName(item, style.name.lengthThreshold);
+    item.displaygender = getDisplayGender(item);
+    item.liferange = getLifeRange(item);
 
     // Move the node image position depending on the image.id node information
-    let nodeImg = item.children('.' + Class.IMG_WRAPPER).children('.' + Class.IMG);
+    let nodeImg = itemElement.children('.' + classes.imgWrapper).children('.' + classes.img);
     nodeImg.css({
-      'background-position-x': ((cfg.image.id !== null) ? (cfg.image.id + 2) : (cfg.gender)) * (-1 * Measure.Node.WIDTH),
+      'background-position-x': (item.extracted ? (item.idx + 2) : item.displaygender) * (-1 * style.item.width),
+    });
+
+    // Iterate through each child of details container and fetch the values from the data
+    let itemDetails = itemElement.children('.' + classes.details);
+    let itemDetailsChildren = itemDetails.children('.' + classes.detailsWrapper).children();
+    itemDetailsChildren.each(function() {
+      let itemPropertyName = $(this).attr('name');
+      $(this).text(item[itemPropertyName]);
     });
 
     // Add special highlight class based on importance
-    let importance = cfg['importance'];
+    let importance = item['importance'];
     if (importance != null || importance != undefined) {
-      nodeDetails.css({
-        'background-color': Color.Highlight.BGS[importance],
-        'color': Color.Highlight.TEXT,
+      itemDetails.css({
+        'background-color': style.highlight.background.colors[importance],
+        'color': style.highlight.text.color,
       });
     }
     else {
-      nodeDetails.css({
-        'background-color': Color.Node.BG,
-        'color': Color.Node.TEXT,
+      itemDetails.css({
+        'background-color': style.item.background.color,
+        'color': style.item.text.color,
       });
     }
 
-    // Add filtered link to each node
-    item.attr('href', LOC.substring(0, LOC.lastIndexOf('/')) + (IS_DEV ? '/index.html' : '') + '?q=' + cfg.id);
-  },
+    // Add filtered link to each item
+    itemElement.attr({
+      'onClick': 'updatePersons(\'' + item.id + '\')'
+    });
+  }
 
-};
+  return result;
+}();
