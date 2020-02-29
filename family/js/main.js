@@ -90,5 +90,5 @@ $(document).ready(function($) {
   }
 
   // Update zoom
-  hammerIt(document.getElementById("tree"));
+  pinchZoom(document.getElementById("tree"));
 });
