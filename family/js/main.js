@@ -7,7 +7,7 @@ function updatePersons(query)
     query = ''
   }
 
-  $.getJSON('https://api.jsonbin.io/b/5e58ed5b09ac43054813b795/latest', function(gedcom)
+  $.getJSON('/family/js/data.json', function(gedcom)
   {
     'use strict';
 
@@ -88,7 +88,4 @@ $(document).ready(function($) {
   if (webTyped) {
     updatePersons(window.location.get('q'));
   }
-
-  // Update zoom
-  pinchZoom(document.getElementById("tree"));
 });
