@@ -439,11 +439,11 @@ primitives.common.createGraphics = function (preferred, widget) {
  * @returns {boolean} Returns true if browser is chrome.
  * @ignore
  */
-primitives.common.isChrome = function () {
+primitives.common.isOldBrowser = function () {
   if (navigator != null) { //ignore jslint
-    return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor); //ignore jslint
+    return /MSIE/.test(navigator.userAgent); //ignore jslint
   }
-  return false;
+  return true;
 };
 
 /**
@@ -23409,7 +23409,7 @@ primitives.orgdiagram.BaseControl = function (element, options, taskManagerFacto
 
     layout.scrollPanel.addEventListener('keydown', onKeyDown);
     layout.scrollPanel.addEventListener('scroll', onScroll);
-    if (_data.options.enablePanning && primitives.common.isChrome()) {
+    if (_data.options.enablePanning && !primitives.common.isOldBrowser()) {
       layout.scrollPanel.draggable = true;
       layout.scrollPanel.addEventListener('dragstart', onDragStart);
       layout.scrollPanel.addEventListener('drag', onDragScroll);

@@ -7,7 +7,7 @@ function updatePersons(query)
     query = ''
   }
 
-  $.getJSON('/family/js/data.json', function(gedcom)
+  $.getJSON('https://api.jsonbin.io/b/5e58ed5b09ac43054813b795/latest', function(gedcom)
   {
     'use strict';
 

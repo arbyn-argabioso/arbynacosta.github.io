@@ -45,6 +45,12 @@ body {
   background: transparent;
 }
 
+#tree,
+.orgdiagram {
+  scrollbar-height: none;
+  scrollbar-width: none;
+}
+
 #tree > .orgdiagram > .orgdiagram > .orgdiagram {
   margin: 25px 0 0 25px;
   zoom: 0.98 !important;
