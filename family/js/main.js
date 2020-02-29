@@ -88,7 +88,4 @@ $(document).ready(function($) {
   if (webTyped) {
     updatePersons(window.location.get('q'));
   }
-
-  // Update zoom
-  hammerIt(document.getElementById("tree"));
 });

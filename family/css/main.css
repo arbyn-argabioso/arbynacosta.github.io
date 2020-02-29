@@ -20,7 +20,6 @@ body {
 }
 
 #tree {
-  cursor: move;
   cursor: -webkit-grab;
   cursor: grab;
 }
@@ -50,7 +49,6 @@ body {
 .orgdiagram {
   scrollbar-height: none;
   scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
 #tree > .orgdiagram > .orgdiagram > .orgdiagram {
@@ -258,14 +256,6 @@ a.tree-item:hover .liferange {
 #search-form-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(170, 170, 170, 0.87);
   opacity: 1; /* Firefox */
-}
-
-#search-form-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: rgba(170, 170, 170, 0.87);
-}
-
-#search-form-input::-ms-input-placeholder { /* Microsoft Edge */
-  color: rgba(170, 170, 170, 0.87);
 }
 
 #search #search-button-container:after {

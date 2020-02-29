@@ -2028,409 +2028,6 @@
       ]
     },
     {
-      "id": "51268",
-      "extracted": false,
-      "principal": false,
-      "gender": {
-        "type": "http://gedcomx.org/Male"
-      },
-      "names": [
-        {
-          "id": "o0zctjk53",
-          "type": "http://gedcomx.org/Birth",
-          "nameForms": [
-            {
-              "parts": [
-                {
-                  "type": "http://gedcomx.org/Given",
-                  "value": "Eusebio L"
-                },
-                {
-                  "type": "http://gedcomx.org/Surname",
-                  "value": "Argabioso"
-                }
-              ],
-              "fullText": "Eusebio L Argabioso"
-            }
-          ]
-        }
-      ],
-      "facts": [
-        {
-          "id": "ltc2a4ne8",
-          "type": "http://gedcomx.org/Birth",
-          "primary": false,
-          "date": {
-            "original": "1895"
-          },
-          "place": {
-            "original": "Majayjay, Laguna, Philippines"
-          }
-        },
-        {
-          "id": "ga6o6uav0",
-          "type": "http://gedcomx.org/Death",
-          "primary": false,
-          "date": {
-            "original": "27 Oct 1972"
-          },
-          "place": {
-            "original": "Majayjay, Laguna, Philippines"
-          }
-        }
-      ]
-    },
-    {
-      "id": "54446",
-      "extracted": false,
-      "principal": false,
-      "gender": {
-        "type": "http://gedcomx.org/Female"
-      },
-      "names": [
-        {
-          "id": "mx96s3fjq",
-          "type": "http://gedcomx.org/Birth",
-          "nameForms": [
-            {
-              "parts": [
-                {
-                  "type": "http://gedcomx.org/Given",
-                  "value": "Francisca"
-                },
-                {
-                  "type": "http://gedcomx.org/Surname",
-                  "value": "Mia"
-                }
-              ],
-              "fullText": "Francisca Mia"
-            }
-          ]
-        }
-      ],
-      "facts": [
-        {
-          "id": "yb86y4qmw",
-          "type": "http://gedcomx.org/Birth",
-          "primary": false,
-          "date": {
-            "original": ""
-          },
-          "place": {
-            "original": "Philippines"
-          }
-        },
-        {
-          "id": "7zhtj4sqk",
-          "type": "http://gedcomx.org/Death",
-          "primary": false,
-          "date": {
-            "original": null
-          }
-        }
-      ]
-    },
-    {
-      "id": "208645",
-      "extracted": false,
-      "principal": false,
-      "gender": {
-        "type": "http://gedcomx.org/Male"
-      },
-      "names": [
-        {
-          "id": "xjdb2x842",
-          "type": "http://gedcomx.org/Birth",
-          "nameForms": [
-            {
-              "parts": [
-                {
-                  "type": "http://gedcomx.org/Given",
-                  "value": "Fernando"
-                },
-                {
-                  "type": "http://gedcomx.org/Surname",
-                  "value": "Saplala"
-                }
-              ],
-              "fullText": "Fernando Saplala"
-            }
-          ]
-        }
-      ],
-      "facts": [
-        {
-          "id": "k76bbido2",
-          "type": "http://gedcomx.org/Birth",
-          "primary": false,
-          "date": {
-            "original": ""
-          },
-          "place": {
-            "original": "Philippines"
-          }
-        },
-        {
-          "id": "axlpqpxxq",
-          "type": "http://gedcomx.org/Death",
-          "primary": false,
-          "date": {
-            "original": null
-          }
-        }
-      ]
-    },
-    {
-      "id": "59591",
-      "extracted": false,
-      "principal": false,
-      "gender": {
-        "type": "http://gedcomx.org/Female"
-      },
-      "names": [
-        {
-          "id": "5yr0wkq2o",
-          "type": "http://gedcomx.org/Birth",
-          "nameForms": [
-            {
-              "parts": [
-                {
-                  "type": "http://gedcomx.org/Given",
-                  "value": "Lucina Gutierrez"
-                },
-                {
-                  "type": "http://gedcomx.org/Surname",
-                  "value": "Perez"
-                }
-              ],
-              "fullText": "Lucina Gutierrez Perez"
-            }
-          ]
-        }
-      ],
-      "facts": [
-        {
-          "id": "ol3kpscgo",
-          "type": "http://gedcomx.org/Birth",
-          "primary": false,
-          "date": {
-            "original": ""
-          },
-          "place": {
-            "original": "Philippines"
-          }
-        },
-        {
-          "id": "h46tj1ga5",
-          "type": "http://gedcomx.org/Death",
-          "primary": false,
-          "date": {
-            "original": null
-          }
-        }
-      ]
-    },
-    {
-      "id": "55684",
-      "extracted": false,
-      "principal": false,
-      "gender": {
-        "type": "http://gedcomx.org/Male"
-      },
-      "names": [
-        {
-          "id": "k7hbclwfa",
-          "type": "http://gedcomx.org/Birth",
-          "nameForms": [
-            {
-              "parts": [
-                {
-                  "type": "http://gedcomx.org/Given",
-                  "value": "Victor"
-                },
-                {
-                  "type": "http://gedcomx.org/Surname",
-                  "value": "Perez"
-                }
-              ],
-              "fullText": "Victor Perez"
-            }
-          ]
-        }
-      ],
-      "facts": [
-        {
-          "id": "x9l4a902i",
-          "type": "http://gedcomx.org/Birth",
-          "primary": false,
-          "date": {
-            "original": ""
-          },
-          "place": {
-            "original": "Philippines"
-          }
-        },
-        {
-          "id": "q2cq1lt4y",
-          "type": "http://gedcomx.org/Death",
-          "primary": false,
-          "date": {
-            "original": null
-          }
-        }
-      ]
-    },
-    {
-      "id": "69156",
-      "extracted": false,
-      "principal": false,
-      "gender": {
-        "type": "http://gedcomx.org/Female"
-      },
-      "names": [
-        {
-          "id": "xy54i0y74",
-          "type": "http://gedcomx.org/Birth",
-          "nameForms": [
-            {
-              "parts": [
-                {
-                  "type": "http://gedcomx.org/Given",
-                  "value": "Petra Gutierrez"
-                },
-                {
-                  "type": "http://gedcomx.org/Surname",
-                  "value": "Perez"
-                }
-              ],
-              "fullText": "Petra Gutierrez Perez"
-            }
-          ]
-        }
-      ],
-      "facts": [
-        {
-          "id": "90tisjpk7",
-          "type": "http://gedcomx.org/Birth",
-          "primary": false,
-          "date": {
-            "original": "19 Oct 1917"
-          },
-          "place": {
-            "original": "Manila, Metro Manila, Philippines"
-          }
-        },
-        {
-          "id": "zgyzw83dl",
-          "type": "http://gedcomx.org/Death",
-          "primary": false,
-          "date": {
-            "original": null
-          }
-        }
-      ]
-    },
-    {
-      "id": "45165",
-      "extracted": false,
-      "principal": false,
-      "gender": {
-        "type": "http://gedcomx.org/Male"
-      },
-      "names": [
-        {
-          "id": "ckrqhzs3x",
-          "type": "http://gedcomx.org/Birth",
-          "nameForms": [
-            {
-              "parts": [
-                {
-                  "type": "http://gedcomx.org/Given",
-                  "value": "Ligorio"
-                },
-                {
-                  "type": "http://gedcomx.org/Surname",
-                  "value": "Acosta"
-                }
-              ],
-              "fullText": "Ligorio Acosta"
-            }
-          ]
-        }
-      ],
-      "facts": [
-        {
-          "id": "pj56x9i3w",
-          "type": "http://gedcomx.org/Birth",
-          "primary": false,
-          "date": {
-            "original": "1871"
-          },
-          "place": {
-            "original": "Philippines"
-          }
-        },
-        {
-          "id": "oskhw8lxr",
-          "type": "http://gedcomx.org/Death",
-          "primary": false,
-          "date": {
-            "original": "7 Jul 1948"
-          }
-        }
-      ]
-    },
-    {
-      "id": "1009831",
-      "extracted": false,
-      "principal": false,
-      "gender": {
-        "type": "http://gedcomx.org/Female"
-      },
-      "names": [
-        {
-          "id": "e70jfsinx",
-          "type": "http://gedcomx.org/Birth",
-          "nameForms": [
-            {
-              "parts": [
-                {
-                  "type": "http://gedcomx.org/Given",
-                  "value": "Maximiana"
-                },
-                {
-                  "type": "http://gedcomx.org/Surname",
-                  "value": "Bongco"
-                }
-              ],
-              "fullText": "Maximiana Bongco"
-            }
-          ]
-        }
-      ],
-      "facts": [
-        {
-          "id": "nf8ussrid",
-          "type": "http://gedcomx.org/Birth",
-          "primary": false,
-          "date": {
-            "original": ""
-          },
-          "place": {
-            "original": "Philippines"
-          }
-        },
-        {
-          "id": "lz1mn749s",
-          "type": "http://gedcomx.org/Death",
-          "primary": false,
-          "date": {
-            "original": null
-          }
-        }
-      ]
-    },
-    {
       "id": "61556",
       "extracted": false,
       "principal": false,
@@ -3852,6 +3449,409 @@
           },
           "place": {
             "original": "Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "51268",
+      "extracted": false,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "o0zctjk53",
+          "type": "http://gedcomx.org/Birth",
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Eusebio L"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Argabioso"
+                }
+              ],
+              "fullText": "Eusebio L Argabioso"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "ltc2a4ne8",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "1895"
+          },
+          "place": {
+            "original": "Majayjay, Laguna, Philippines"
+          }
+        },
+        {
+          "id": "ga6o6uav0",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "date": {
+            "original": "27 Oct 1972"
+          },
+          "place": {
+            "original": "Majayjay, Laguna, Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "54446",
+      "extracted": false,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "mx96s3fjq",
+          "type": "http://gedcomx.org/Birth",
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Francisca"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Mia"
+                }
+              ],
+              "fullText": "Francisca Mia"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "yb86y4qmw",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": ""
+          },
+          "place": {
+            "original": "Philippines"
+          }
+        },
+        {
+          "id": "7zhtj4sqk",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "date": {
+            "original": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "208645",
+      "extracted": false,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "xjdb2x842",
+          "type": "http://gedcomx.org/Birth",
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Fernando"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Saplala"
+                }
+              ],
+              "fullText": "Fernando Saplala"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "k76bbido2",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": ""
+          },
+          "place": {
+            "original": "Philippines"
+          }
+        },
+        {
+          "id": "axlpqpxxq",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "date": {
+            "original": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "59591",
+      "extracted": false,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "5yr0wkq2o",
+          "type": "http://gedcomx.org/Birth",
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Lucina Gutierrez"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Perez"
+                }
+              ],
+              "fullText": "Lucina Gutierrez Perez"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "ol3kpscgo",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": ""
+          },
+          "place": {
+            "original": "Philippines"
+          }
+        },
+        {
+          "id": "h46tj1ga5",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "date": {
+            "original": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "55684",
+      "extracted": false,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "k7hbclwfa",
+          "type": "http://gedcomx.org/Birth",
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Victor"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Perez"
+                }
+              ],
+              "fullText": "Victor Perez"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "x9l4a902i",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": ""
+          },
+          "place": {
+            "original": "Philippines"
+          }
+        },
+        {
+          "id": "q2cq1lt4y",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "date": {
+            "original": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "69156",
+      "extracted": false,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "xy54i0y74",
+          "type": "http://gedcomx.org/Birth",
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Petra Gutierrez"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Perez"
+                }
+              ],
+              "fullText": "Petra Gutierrez Perez"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "90tisjpk7",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "19 Oct 1917"
+          },
+          "place": {
+            "original": "Manila, Metro Manila, Philippines"
+          }
+        },
+        {
+          "id": "zgyzw83dl",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "date": {
+            "original": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "45165",
+      "extracted": false,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "ckrqhzs3x",
+          "type": "http://gedcomx.org/Birth",
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Ligorio"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Acosta"
+                }
+              ],
+              "fullText": "Ligorio Acosta"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "pj56x9i3w",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": "1871"
+          },
+          "place": {
+            "original": "Philippines"
+          }
+        },
+        {
+          "id": "oskhw8lxr",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "date": {
+            "original": "7 Jul 1948"
+          }
+        }
+      ]
+    },
+    {
+      "id": "1009831",
+      "extracted": false,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "e70jfsinx",
+          "type": "http://gedcomx.org/Birth",
+          "nameForms": [
+            {
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Maximiana"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Bongco"
+                }
+              ],
+              "fullText": "Maximiana Bongco"
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "nf8ussrid",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "date": {
+            "original": ""
+          },
+          "place": {
+            "original": "Philippines"
+          }
+        },
+        {
+          "id": "lz1mn749s",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "date": {
+            "original": null
           }
         }
       ]

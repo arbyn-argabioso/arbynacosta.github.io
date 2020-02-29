@@ -28,6 +28,22 @@ document.body.width = function()
 }();
 
 /*
+ * Left/Start trim for strings
+ */
+String.prototype.ltrim = function()
+{
+  return this.replace(/^\s+/g, '');
+}
+
+/*
+ * Right/End trim for strings
+ */
+String.prototype.rtrim = function()
+{
+  return this.replace(/\s+$/g, '');
+}
+
+/*
  * Returns the value of the indicated URL parameter name
  *
  * @param {Text} name The URL parameter name to get the value of
@@ -37,21 +53,13 @@ window.location.get = function(name)
 {
   'use strict';
 
-  const urlParams = new URLSearchParams(this.search);
-  let paramValue = urlParams.get(name) ? urlParams.get(name) : null;
-
-  // Try the modern URLSearchParams first
-  if (paramValue !== null && paramValue !== undefined) {
-    return paramValue.trimStart().trimEnd().replace(/\s\s+/g, ' ');
-  }
-
   // Use regex on location.href if URLSearchParams is not supported
-  paramValue = new RegExp('[\?&]' + name + '=([^&#]*)').exec(this.href);
+  let paramValue = new RegExp('[\?&]' + name + '=([^&#]*)').exec(this.href);
   if (paramValue == null || (paramValue && !paramValue[1])) {
     return null;
   }
   else {
-    return decodeURI(paramValue[1]).trimStart().trimEnd().replace(/\s\s+/g, ' ');
+    return decodeURI(paramValue[1]).ltrim().rtrim().replace(/\s\s+/g, ' ');
   }
 };
 
