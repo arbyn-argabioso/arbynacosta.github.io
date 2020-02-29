@@ -19,6 +19,17 @@ body {
   margin: 0;
 }
 
+#tree {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+#tree:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
 #tree,
 #tree > .orgdiagram {
   margin: 0;
@@ -52,7 +63,7 @@ body {
   outline: 0;
 }
 
-.tree-node {
+.tree-item {
   border-radius: 8px;
   box-shadow: 0 1px 6px rgba(60, 64, 67, 0.28);
   background: #fff;
@@ -62,7 +73,7 @@ body {
   width: auto;
 }
 
-.tree-node .node-img-container {
+.tree-item .item-img-container {
   border: 0;
   border-radius: 8px 8px 0 0;
   /*height: 82.62px;*/
@@ -74,7 +85,7 @@ body {
   z-index: 99;
 }
 
-.tree-node .node-img {
+.tree-item .item-img {
   background-image: url("../img/family_tree_sprite.gif");
   background-position-y: 0;
   background-size: auto 100%;
@@ -94,14 +105,14 @@ body {
   will-change: transform;
 }
 
-.tree-node .node-details {
+.tree-item .item-details {
   border-radius: 0 0 8px 8px;
   left: 0;
   position: absolute;
   z-index: 998;
 }
 
-.tree-node .node-details .node-details-container {
+.tree-item .item-details .item-details-container {
   border-radius: 0 0 8px 8px;
   display: table-cell;
   padding: 0.67rem 0.57rem 0.57rem; /* 0.85rem; */
@@ -109,7 +120,7 @@ body {
   width: 100%;
 }
 
-.tree-node .node-details::before {
+.tree-item .item-details::before {
   background-color: #222;
   content: '';
   display: block;
@@ -121,7 +132,7 @@ body {
   width: 0%;
 }
 
-.tree-node .node-details .fullname {
+.tree-item .item-details .displayname {
   font-size: 0.75rem;
   font-family: 'ProductSans', sans-serif;
   font-weight: 600;
@@ -130,26 +141,26 @@ body {
   margin-bottom: 3px;
 }
 
-.tree-node .node-details .life {
+.tree-item .item-details .liferange {
   margin: 0;
 }
 
-.tree-node .node-details .fullname,
-.tree-node .node-details .life {
+.tree-item .item-details .displayname,
+.tree-item .item-details .liferange {
   position: relative;
   text-align: center;
   z-index: 999;
 }
 
-.tree-node:hover {
+.tree-item:hover {
   cursor: pointer;
 }
 
-.tree-node:hover .node-details::before {
+.tree-item:hover .item-details::before {
   width: 100%;
 }
 
-.tree-node:hover .node-img {
+.tree-item:hover .item-img {
   -webkit-transform: scale(1.15);
   transform: scale(1.15);
   transition: -webkit-transform 0.75s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -157,36 +168,19 @@ body {
   transition: transform 0.75s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 0.75s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-a.tree-node,
-a.tree-node .fullname,
-a.tree-node .life,
-a.tree-node:active,
-a.tree-node:active .fullname,
-a.tree-node:active .life,
-a.tree-node:focus,
-a.tree-node:focus .fullname,
-a.tree-node:focus .life,
-a.tree-node:hover,
-a.tree-node:hover .node-, displayname,
-a.tree-node:hover .fullname,
-a.tree-node:hover .life {
+a.tree-item,
+a.tree-item .displayname,
+a.tree-item .liferange,
+a.tree-item:active,
+a.tree-item:active .displayname,
+a.tree-item:active .liferange,
+a.tree-item:focus,
+a.tree-item:focus .displayname,
+a.tree-item:focus .liferange,
+a.tree-item:hover,
+a.tree-item:hover .displayname,
+a.tree-item:hover .liferange {
   text-decoration: none;
-}
-
-#confidence {
-  background-color: #fff;
-  border-radius: 999px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
-  color: rgba(0, 0, 0, 0.87);
-  -webkit-backface-visibility: hidden;
-  font-family: 'ProductSans', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 600;
-  left: 9px;
-  max-height: 35px;
-  padding: 8px 16px;
-  position: fixed;
-  bottom: 9px;
 }
 
 #search {
@@ -198,8 +192,8 @@ a.tree-node:hover .life {
   color: rgba(0, 0, 0, 0.87);
   -webkit-backface-visibility: hidden;
   font-family: 'ProductSans', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
   left: 9px;
   height: 48px;
   /*padding: 12px 104px 11px 64px;*/
@@ -248,8 +242,8 @@ a.tree-node:hover .life {
   border: 0;
   color: rgba(0, 0, 0, 0.87);
   font-family: 'ProductSans', sans-serif;
-  font-size: 0.87rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
   margin: 0 !important;
   padding: 0 !important;
   outline: 0;
@@ -338,20 +332,25 @@ a.tree-node:hover .life {
   background-position: -24px 0;
 }
 
+#search-button:disabled::before {
+  background-position: 0 0;
+}
+
+#search-button:disabled:active::before, 
+#search-button:disabled:hover::before,
+#search-button:disabled:focus::before {
+  cursor: default;
+}
+
 .hidden {
   display: none !important;
   visibility: hidden !important;
 }
 
-@media screen and (min-width: 450px) {
-  #confidence {
-    bottom: auto;
-    top: 66px;
-  }
-}
-
 @media screen and (max-width: 450px) {
   #search {
+    bottom: 9px;
+    top: auto;
     width: calc(100% - 19px);
   }
 }

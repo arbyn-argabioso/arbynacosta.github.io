@@ -1,65 +1,94 @@
-const LOC = window.location.pathname;
-const IS_DEV = LOC.includes('.html');
-const CURRENT_URL = LOC.substring(0, LOC.lastIndexOf('/')) + (IS_DEV ? '/index.html' : '');
+let control = null;
 
-let control;
-
-document.addEventListener('DOMContentLoaded', function() {
-  'use strict';
-
-  let options = new primitives.famdiagram.Config();
-  options.annotations = ANNOTATIONS;
-  options.items = MAIN_TREE;
-
-  // Template
-  options.defaultTemplateName = Template.NAME;
-  options.onItemRender = Template.render;
-  options.templates = [Template.get()];
-  options.updateMode = primitives.common.UpdateMode.Recreate;
-
-  // Connectors
-  options.arrowsDirection = primitives.common.GroupByType.None;
-  options.bevelSize = 9;
-  options.connectorType = primitives.common.ConnectorType.Curved;
-  options.elbowDotSize = 0;
-  options.elbowType = primitives.common.ElbowType.Round;
-  options.showExtraArrows = false;
-
-  // Spacing
-  options.lineItemsInterval = 50;
-  options.lineLevelShift = 30;
-  options.linesWidth = 2;
-  options.normalItemsInterval = 13;
-  options.normalLevelShift = 26;
-  options.pageFitMode = primitives.common.PageFitMode.None;
-
-  options.linesColor = Color.LINE;
-
-  control = primitives.famdiagram.Control(document.getElementById('tree'), options);
-
-  $('#tree').children().first().addClass('dragscroll');
-
-  // Scroll to main node
-  let scrollableElement = $('#tree').children().first().children().first();
-  $('#tree').children().first().scrollTop((scrollableElement.height() - $(window).height()) / 2);
-  $('#tree').children().first().scrollLeft((scrollableElement.width() - $(window).width()) / 2);
-
-  let IntQuery = parseInt(QUERY);
-  if (Number.isInteger(IntQuery)) {
-    let mainNode = Utils.getNode(IntQuery, MAIN_TREE);
-    $('#search-form-input').val(mainNode.fullfullname);
-    document.title = mainNode.fullfullname + ' | Family Tree';
-  }
-  else {
-    $('#search-form-input').val(QUERY);
+function updatePersons(query)
+{
+  // Make sure query is not null or undefined
+  if (!query) {
+    query = ''
   }
 
-  switch(window.location.protocol) {
-   case 'http:':
-   case 'https:':
-     $('#home-button').attr('href', '/family/');
-     break;
+  $.getJSON('https://api.jsonbin.io/b/5e58ed5b09ac43054813b795/latest', function(gedcom)
+  {
+    'use strict';
+
+    // Update configuration
+    let options = new primitives.famdiagram.Config();
+    options = Object.assign(options, config);
+
+    // Add data and apply preprocesses
+    let persons = addRelationships(gedcom.persons, gedcom.relationships);
+    persons = getItemizedArray(persons);
+
+    let filteredResults = filterPersons(query, persons);
+    options.items = filteredResults.persons;
+    options.annotations = filteredResults.annotations;
+
+    // Template to options
+    options.defaultTemplateName = template.name;
+    options.onItemRender = template.render;
+    options.templates = [template];
+
+    $("#tree").animate({
+      opacity: 0,
+    }, 200, function() {
+      $("#tree").empty();
+      control = primitives.famdiagram.Control(document.getElementById('tree'), options);
+
+      // Scroll to main item
+      let scrollableElement = $('#tree').children().first().children().first();
+      $('#tree').children().first().scrollTop((scrollableElement.height() - $(window).height()) / 2);
+      $('#tree').children().first().scrollLeft((scrollableElement.width() - $(window).width()) / 2);
+      $("#tree").animate({opacity: 1});
+    });
+
+    let newTitle = filteredResults.main.names[0].nameForms[0].fullText + ' | Family Tree'
+    window.history.pushState('popState', newTitle, window.location.href.split('?')[0] + '?q=' + query);
+    $(document).prop('title', newTitle);
+  });
+}
+
+$(document).ready(function($) {
+  let webTyped = true;
+
+  // Disable search submission if the input is empty
+  $('#search-button').attr('disabled', 'disabled');
+  $('#search-form :input').on('keyup', function() {
+    let empty = false;
+
+    $('#search-form :input').each(function() {
+      empty = $(this).val().length == 0;
+    });
+
+    if (empty)
+      $('#search-button').attr('disabled', 'disabled');
+    else
+      $('#search-button').attr('disabled', false);
+  });
+
+  // Do update when search form is submitted
+  $("#search-form").submit(function(event) {
+    // Get an associative array of just the values.
+    var values = {};
+    $('#search-form :input').each(function() {
+        values[this.name] = $(this).val();
+    });
+
+    webTyped = false;
+    updatePersons(values['q']);
+    event.preventDefault();
+  });
+
+  // Do update on back button
+  $(window).on('popstate', function() {
+    webTyped = false;
+    updatePersons(window.location.get('q'));
+  });
+
+  // Only do a separate update on first site enter
+  if (webTyped) {
+    updatePersons(window.location.get('q'));
   }
 
-  Utils.checkTree(RAW_TREE_DATA);
+  // Update zoom
+  hammerIt(document.getElementById("tree"));
 });
