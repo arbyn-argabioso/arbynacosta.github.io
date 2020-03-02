@@ -226,6 +226,22 @@ function addRelationships(persons, relationships)
 }
 
 /*
+ * Add display names and display life.
+ */
+function addDisplayDetails(persons)
+{
+  for (let i = 0, imax = persons.length; i < imax; i++) {
+    let person = persons[i];
+
+    person.displayname = getDisplayName(person, style.name.lengthThreshold);
+    person.displaygender = getDisplayGender(person);
+    person.liferange = getLifeRange(person);
+  }
+
+  return persons;
+}
+
+/*
  * Adds an annotation entry into the given array, using the
  * different parameters given.
  *

@@ -20,7 +20,7 @@ function updatePersons(query)
     persons = getItemizedArray(persons);
 
     let filteredResults = filterPersons(query, persons);
-    options.items = filteredResults.persons;
+    options.items = addDisplayDetails(filteredResults.persons);
     options.annotations = filteredResults.annotations;
 
     // Template to options
@@ -45,6 +45,8 @@ function updatePersons(query)
     window.history.pushState('popState', newTitle, window.location.href.split('?')[0] + '?q=' + query);
     $(document).prop('title', newTitle);
   });
+
+
 }
 
 $(document).ready(function($) {
@@ -82,6 +84,15 @@ $(document).ready(function($) {
   $(window).on('popstate', function() {
     webTyped = false;
     updatePersons(window.location.get('q'));
+  });
+
+  // Update on resize
+  let doit = null;
+  $(window).resize(function() {
+    clearTimeout(doit);
+    doit = setTimeout(function() {
+      control.update(primitives.common.UpdateMode.Refresh);
+    }, 100);
   });
 
   // Only do a separate update on first site enter

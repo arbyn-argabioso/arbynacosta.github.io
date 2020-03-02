@@ -122,14 +122,13 @@ function filterPersons(query, persons)
   // Default to first person in direct matches, otherwise... ARBYN IS THE MAIN!!
   let singleSearch = (directMatchIds.length == 1);
   let mainPerson = null;
+  let annotations = [];
   if (singleSearch) {
     mainPerson = persons.getby(directMatchIds[0]);
+    annotations = getPedegreeAnnotations(mainPerson.id, 0, persons, []);
   } else if (isMainQuery) {
     mainPerson = persons[0];
-  } else {
-    mainPerson = persons.getby(directMatchIds[0]);
   }
-  let annotations = getPedegreeAnnotations(mainPerson.id, 0, persons, []);
 
   for (let i = 0, imax = persons.length; i < imax; i++) {
     let person = persons[i];
@@ -167,15 +166,15 @@ function filterPersons(query, persons)
   }
 
   // Check if there are any important people in direct matches
-  let isImportantFound = false;
-  for (let i = 0, imax = directMatchIds.length; i < imax; i++) {
-    if (persons.getby(directMatchIds[i]).importance != undefined) {
-      isImportantFound = true;
-    }
-  }
+  // let isImportantFound = false;
+  // for (let i = 0, imax = directMatchIds.length; i < imax; i++) {
+  //   if (persons.getby(directMatchIds[i]).importance != undefined) {
+  //     isImportantFound = true;
+  //   }
+  // }
 
   // Add important nodes if an importance was seen in direct
-  if (isImportantFound) {
+  if (singleSearch) {
     for (let i = 0, imax = persons.length; i < imax; i++) {
       let person = persons[i];
 

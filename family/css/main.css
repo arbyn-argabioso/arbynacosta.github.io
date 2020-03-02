@@ -61,7 +61,7 @@ body {
   outline: 0;
 }
 
-.tree-item {
+.person {
   border-radius: 8px;
   box-shadow: 0 1px 6px rgba(60, 64, 67, 0.28);
   background: #fff;
@@ -71,7 +71,7 @@ body {
   width: auto;
 }
 
-.tree-item .item-img-container {
+.person .person-img-container {
   border: 0;
   border-radius: 8px 8px 0 0;
   /*height: 82.62px;*/
@@ -83,7 +83,7 @@ body {
   z-index: 99;
 }
 
-.tree-item .item-img {
+.person .person-img {
   background-image: url("../img/family_tree_sprite.gif");
   background-position-y: 0;
   background-size: auto 100%;
@@ -103,14 +103,14 @@ body {
   will-change: transform;
 }
 
-.tree-item .item-details {
+.person .person-details {
   border-radius: 0 0 8px 8px;
   left: 0;
   position: absolute;
   z-index: 998;
 }
 
-.tree-item .item-details .item-details-container {
+.person .person-details .person-details-container {
   border-radius: 0 0 8px 8px;
   display: table-cell;
   padding: 0.67rem 0.57rem 0.57rem; /* 0.85rem; */
@@ -118,7 +118,7 @@ body {
   width: 100%;
 }
 
-.tree-item .item-details::before {
+.person .person-details::before {
   background-color: #222;
   content: '';
   display: block;
@@ -130,7 +130,7 @@ body {
   width: 0%;
 }
 
-.tree-item .item-details .displayname {
+.person .person-details .displayname {
   font-size: 0.75rem;
   font-family: 'ProductSans', sans-serif;
   font-weight: 600;
@@ -139,26 +139,26 @@ body {
   margin-bottom: 3px;
 }
 
-.tree-item .item-details .liferange {
+.person .person-details .liferange {
   margin: 0;
 }
 
-.tree-item .item-details .displayname,
-.tree-item .item-details .liferange {
+.person .person-details .displayname,
+.person .person-details .liferange {
   position: relative;
   text-align: center;
   z-index: 999;
 }
 
-.tree-item:hover {
+.person:hover {
   cursor: pointer;
 }
 
-.tree-item:hover .item-details::before {
+.person:hover .person-details::before {
   width: 100%;
 }
 
-.tree-item:hover .item-img {
+.person:hover .person-img {
   -webkit-transform: scale(1.15);
   transform: scale(1.15);
   transition: -webkit-transform 0.75s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -166,18 +166,18 @@ body {
   transition: transform 0.75s cubic-bezier(0.25, 0.1, 0.25, 1), -webkit-transform 0.75s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-a.tree-item,
-a.tree-item .displayname,
-a.tree-item .liferange,
-a.tree-item:active,
-a.tree-item:active .displayname,
-a.tree-item:active .liferange,
-a.tree-item:focus,
-a.tree-item:focus .displayname,
-a.tree-item:focus .liferange,
-a.tree-item:hover,
-a.tree-item:hover .displayname,
-a.tree-item:hover .liferange {
+a.person,
+a.person .displayname,
+a.person .liferange,
+a.person:active,
+a.person:active .displayname,
+a.person:active .liferange,
+a.person:focus,
+a.person:focus .displayname,
+a.person:focus .liferange,
+a.person:hover,
+a.person:hover .displayname,
+a.person:hover .liferange {
   text-decoration: none;
 }
 
@@ -339,8 +339,6 @@ a.tree-item:hover .liferange {
 
 @media screen and (max-width: 450px) {
   #search {
-    bottom: 9px;
-    top: auto;
     width: calc(100% - 19px);
   }
 }

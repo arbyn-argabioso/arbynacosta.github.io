@@ -17,13 +17,13 @@ const loc = window.location.pathname;
 const url = loc.substring(0, loc.lastIndexOf('/')) + (loc.includes('.html') ? '/index.html' : '');
 
 const classes = {
-  item: 'tree-item',
+  item: 'person',
 
-  imgWrapper: 'item-img-container',
-  img: 'item-img',
+  imgWrapper: 'person-img-container',
+  img: 'person-img',
 
-  detailsWrapper: 'item-details-container',
-  details: 'item-details',
+  detailsWrapper: 'person-details-container',
+  details: 'person-details',
   displayname: 'displayname',
   liferange: 'liferange',
 };
@@ -101,11 +101,6 @@ const template = function()
 
     let item = data.context;
     let itemElement = $(data.element);
-
-    // Preprocesses
-    item.displayname = getDisplayName(item, style.name.lengthThreshold);
-    item.displaygender = getDisplayGender(item);
-    item.liferange = getLifeRange(item);
 
     // Move the node image position depending on the image.id node information
     let nodeImg = itemElement.children('.' + classes.imgWrapper).children('.' + classes.img);
