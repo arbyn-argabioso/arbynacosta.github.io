@@ -11,12 +11,22 @@
           box-sizing: border-box;
 }
 
+html {
+  overflow: hidden;
+  width: 100%;
+}
+
 body {
+  -webkit-overflow-scrolling: touch;
   background-color: #f2f3f4;
   color: #222222;
   font-family: 'Roboto', sans-serif;
+  height: 100%;
   line-height: 1.4;
   margin: 0;
+  overflow-y: scroll;
+  position: fixed;
+  width: 100%;
 }
 
 #tree {
