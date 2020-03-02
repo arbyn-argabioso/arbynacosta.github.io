@@ -99,4 +99,14 @@ $(document).ready(function($) {
   if (webTyped) {
     updatePersons(window.location.get('q'));
   }
+
+  // Handle fullscreen click
+  document.getElementById('#fullscreen-button').addEventListener('click', () => {
+    if (screenfull.isEnabled) {
+      screenfull.request();
+    }
+  });
+  if (screenfull.isEnabled) {
+    $('#fullscreen-button').addClass('hidden');
+  }
 });
