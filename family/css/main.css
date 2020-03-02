@@ -24,7 +24,7 @@ body {
   height: 100%;
   line-height: 1.4;
   margin: 0;
-  overflow-y: scroll;
+  overflow: hidden;
   position: fixed;
   width: 100%;
 }
