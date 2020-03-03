@@ -269,6 +269,11 @@ a.person:hover .liferange {
 
 #search-button,
 #home-button {
+  outline: 0;
+}
+
+#search-button,
+#home-button {
   display: block;
   padding: 12px 15px;
   background: transparent;
@@ -277,7 +282,6 @@ a.person:hover .liferange {
   font: inherit;
   list-style: none;
   margin: 0;
-  outline: 0;
   overflow: visible;
   vertical-align: baseline;
 }
@@ -291,8 +295,7 @@ a.person:hover .liferange {
 }
 
 #search-button::before,
-#home-button::before,
-#fullscreen-button:before {
+#home-button::before {
   content: '';
   display: block;
   width: 24px;
@@ -331,27 +334,6 @@ a.person:hover .liferange {
 #search-button:disabled:hover::before,
 #search-button:disabled:focus::before {
   cursor: default;
-}
-
-#fullscreen-button {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  border: 0;
-  display: block;
-  padding: 12px 12px;
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  width: 48px;
-  height: 48px;
-}
-
-#fullscreen-button:hover {
-  cursor: pointer;
-}
-
-#fullscreen-button:before {
-  background-position: -96px 0;
 }
 
 .hidden {

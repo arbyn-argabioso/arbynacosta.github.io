@@ -1,10 +1,15 @@
 let control = null;
 
-function updatePersons(query)
+function updatePersons(query, isPush)
 {
   // Make sure query is not null or undefined
   if (!query) {
-    query = ''
+    query = '';
+  }
+
+  // Action of update, whether push or pop
+  if (isPush == null || isPush == undefined) {
+    isPush = true;
   }
 
   $.getJSON('https://api.jsonbin.io/b/5e58ed5b09ac43054813b795/latest', function(gedcom)
@@ -41,9 +46,12 @@ function updatePersons(query)
       $("#tree").animate({opacity: 1});
     });
 
-    let newTitle = filteredResults.main.names[0].nameForms[0].fullText + ' | Family Tree'
-    window.history.pushState('popState', newTitle, window.location.href.split('?')[0] + '?q=' + query);
+    // Update title and URL
+    let newTitle = filteredResults.main.names[0].nameForms[0].fullText + ' | Family Tree';
     $(document).prop('title', newTitle);
+    if (isPush) {
+      window.history.pushState({state: 'new'}, newTitle, window.location.href.split('?')[0] + '?q=' + query);
+    }
   });
 
 
@@ -51,6 +59,12 @@ function updatePersons(query)
 
 $(document).ready(function($) {
   let webTyped = true;
+
+  // Do update on back button
+  window.onpopstate = function(event) {
+    webTyped = false;
+    updatePersons(window.location.get('q'), false);
+  };
 
   // Disable search submission if the input is empty
   $('#search-button').attr('disabled', 'disabled');
@@ -69,6 +83,8 @@ $(document).ready(function($) {
 
   // Do update when search form is submitted
   $("#search-form").submit(function(event) {
+    event.preventDefault();
+
     // Get an associative array of just the values.
     var values = {};
     $('#search-form :input').each(function() {
@@ -77,13 +93,14 @@ $(document).ready(function($) {
 
     webTyped = false;
     updatePersons(values['q']);
-    event.preventDefault();
   });
 
-  // Do update on back button
-  $(window).on('popstate', function() {
+  // Do update when search form is submitted
+  $("#home-button").on('click', function(event) {
+    event.preventDefault();
+
     webTyped = false;
-    updatePersons(window.location.get('q'));
+    updatePersons();
   });
 
   // Update on resize
@@ -98,15 +115,5 @@ $(document).ready(function($) {
   // Only do a separate update on first site enter
   if (webTyped) {
     updatePersons(window.location.get('q'));
-  }
-
-  // Handle fullscreen click
-  document.getElementById('#fullscreen-button').addEventListener('click', () => {
-    if (screenfull.isEnabled) {
-      screenfull.request();
-    }
-  });
-  if (screenfull.isEnabled) {
-    $('#fullscreen-button').addClass('hidden');
   }
 });
