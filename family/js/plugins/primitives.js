@@ -13065,7 +13065,7 @@ primitives.famdiagram.UserDefinedNodesOrderTask = function (orderFamilyNodesOpti
  * @returns {famdiagram} Returns reference to family diagram control. Since control adds event listeners bound
  * to its contents, call `destroy` method to clean up everything.
  */
-primitives.famdiagram.Control = function (element, options) {
+primitives.famdiagram.Control = function (element, options, callback) {
   return primitives.orgdiagram.BaseControl(element, options, primitives.famdiagram.TaskManagerFactory, primitives.famdiagram.EventArgsFactory, {
     AnnotationLabelTemplate: primitives.common.AnnotationLabelTemplate,
     ButtonsTemplate: primitives.common.ButtonsTemplate,
@@ -13078,7 +13078,7 @@ primitives.famdiagram.Control = function (element, options) {
     UserTemplate: primitives.common.UserTemplate,
     /* famDiagram specific templates */
     LabelAnnotationTemplate: primitives.common.LabelAnnotationTemplate
-  });
+  }, callback);
 };
 
 
@@ -23089,7 +23089,7 @@ primitives.common.UserTemplate = function (options, content, onRender) {
  * JavaScript Abstract Control
  * @class BaseControl
  */
-primitives.orgdiagram.BaseControl = function (element, options, taskManagerFactory, eventArgsFactory, templates) {
+primitives.orgdiagram.BaseControl = function (element, options, taskManagerFactory, eventArgsFactory, templates, callback) {
   var _data = {
     name: "orgdiagram",
     options: options,
@@ -23699,6 +23699,7 @@ primitives.orgdiagram.BaseControl = function (element, options, taskManagerFacto
   }
 
   update(); /* init control on create */
+  callback(); /* do callback */
 
   return {
     destroy: destroy,

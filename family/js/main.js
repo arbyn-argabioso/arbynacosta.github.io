@@ -1,4 +1,5 @@
 let control = null;
+let event = new Event('loaded');
 
 function updatePersons(query, isPush)
 {
@@ -37,27 +38,32 @@ function updatePersons(query, isPush)
       opacity: 0,
     }, 200, function() {
       $("#tree").empty();
-      control = primitives.famdiagram.Control(document.getElementById('tree'), options);
+      control = primitives.famdiagram.Control(document.getElementById('tree'), options, function() {
+        // Scroll to main item
+        let scrollableElement = $('#tree').children().first().children().first();
+        $('#tree').children().first().scrollTop((scrollableElement.height() - $(window).height()) / 2);
+        $('#tree').children().first().scrollLeft((scrollableElement.width() - $(window).width()) / 2);
+        $("#tree").animate({opacity: 1});
 
-      // Scroll to main item
-      let scrollableElement = $('#tree').children().first().children().first();
-      $('#tree').children().first().scrollTop((scrollableElement.height() - $(window).height()) / 2);
-      $('#tree').children().first().scrollLeft((scrollableElement.width() - $(window).width()) / 2);
-      $("#tree").animate({opacity: 1});
+        // Update title and URL
+        let newTitle = null
+        if (filteredResults.main) {
+          newTitle = filteredResults.main.names[0].nameForms[0].fullText + ' | Family Tree';
+          $(document).prop('title', newTitle);
+        }
+        if (isPush) {
+          window.history.pushState({state: 'new'}, newTitle, window.location.href.split('?')[0] + '?q=' + query);
+        }
+
+        // Update family data datestamp
+        $('#datestamp').html(gedcom.datestamp);
+
+        // Remove hidden class on full loading family data
+        $('#search').removeClass('hidden');
+        $('body > footer').removeClass('hidden');
+      });
     });
-
-    // Update title and URL
-    let newTitle = null
-    if (filteredResults.main) {
-      newTitle = filteredResults.main.names[0].nameForms[0].fullText + ' | Family Tree';
-      $(document).prop('title', newTitle);
-    }
-    if (isPush) {
-      window.history.pushState({state: 'new'}, newTitle, window.location.href.split('?')[0] + '?q=' + query);
-    }
   });
-
-
 }
 
 $(document).ready(function($) {

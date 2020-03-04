@@ -336,6 +336,17 @@ a.person:hover .liferange {
   cursor: default;
 }
 
+body > footer {
+  background-color: transparent;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.65rem;
+  position: fixed;
+  bottom: 0;
+  padding: 0.1rem 0.4rem;
+  right: 0;
+}
+
 .hidden {
   display: none !important;
   visibility: hidden !important;
