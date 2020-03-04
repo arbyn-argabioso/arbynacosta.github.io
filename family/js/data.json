@@ -121,16 +121,23 @@
             "original": "10 Mar 1971"
           },
           "place": {
-            "original": "Philippines"
-          }
+            "original": "Metro Manila, Philippines"
+          },
+          "value": null,
+          "qualifiers": null
         },
         {
           "id": "0bfilpjdr",
           "type": "http://gedcomx.org/Death",
           "primary": false,
           "date": {
-            "original": "25 Jan 2018"
-          }
+            "original": "25 May 2018"
+          },
+          "place": {
+            "original": "Santa Cruz, Laguna, Philippines"
+          },
+          "value": null,
+          "qualifiers": null
         }
       ]
     },
@@ -420,11 +427,13 @@
           "type": "http://gedcomx.org/Birth",
           "primary": false,
           "date": {
-            "original": "13 Sep 1932"
+            "original": "14 Oct 1932"
           },
           "place": {
-            "original": "Philippines"
-          }
+            "original": "Majayjay, Laguna, Philippines"
+          },
+          "value": null,
+          "qualifiers": null
         },
         {
           "id": "56t4rzch8",
@@ -432,7 +441,12 @@
           "primary": false,
           "date": {
             "original": "27 Feb 2020"
-          }
+          },
+          "place": {
+            "original": "St. Luke's Medical Center, Quezon City, Metro Manila, Philippines"
+          },
+          "value": null,
+          "qualifiers": null
         }
       ]
     },
@@ -1083,20 +1097,20 @@
       "names": [
         {
           "id": "17b4mnagd",
-          "type": "http://gedcomx.org/Birth",
+          "type": null,
           "nameForms": [
             {
               "parts": [
                 {
                   "type": "http://gedcomx.org/Given",
-                  "value": "Melosina"
+                  "value": "Melosina Cablao"
                 },
                 {
                   "type": "http://gedcomx.org/Surname",
                   "value": "Gallardo"
                 }
               ],
-              "fullText": "Melosina Gallardo"
+              "fullText": "Melosina Cablao Gallardo"
             }
           ]
         }
@@ -1550,7 +1564,7 @@
             {
               "parts": [
                 {
-                  "type": "http://gedcomx.org/Given",
+                  "type": "http://gedcomx.org/Surname",
                   "value": "Manalo"
                 }
               ],
@@ -1885,11 +1899,13 @@
           "type": "http://gedcomx.org/Birth",
           "primary": false,
           "date": {
-            "original": ""
+            "original": "8 Jul 1941"
           },
           "place": {
             "original": "Philippines"
-          }
+          },
+          "value": null,
+          "qualifiers": null
         },
         {
           "id": "k72e0a0dd",
@@ -3516,20 +3532,20 @@
       "names": [
         {
           "id": "mx96s3fjq",
-          "type": "http://gedcomx.org/Birth",
+          "type": null,
           "nameForms": [
             {
               "parts": [
                 {
                   "type": "http://gedcomx.org/Given",
-                  "value": "Francisca"
+                  "value": "Francisca A"
                 },
                 {
                   "type": "http://gedcomx.org/Surname",
                   "value": "Mia"
                 }
               ],
-              "fullText": "Francisca Mia"
+              "fullText": "Francisca A Mia"
             }
           ]
         }
@@ -3539,12 +3555,12 @@
           "id": "yb86y4qmw",
           "type": "http://gedcomx.org/Birth",
           "primary": false,
-          "date": {
-            "original": ""
-          },
+          "date": null,
           "place": {
-            "original": "Philippines"
-          }
+            "original": "Majayjay, Laguna, Philippines"
+          },
+          "value": null,
+          "qualifiers": null
         },
         {
           "id": "7zhtj4sqk",
@@ -7720,6 +7736,235 @@
         {
           "id": "ccjjusqvv",
           "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "place": {
+            "original": "Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "894387",
+      "extracted": false,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "uxu0mgq9l",
+          "type": null,
+          "nameForms": [
+            {
+              "fullText": "Danilo Franco",
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Danilo"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Franco"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "8xycjfic8",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "place": {
+            "original": "Philippines"
+          }
+        },
+        {
+          "id": "6djxm2a5v",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "place": {
+            "original": "Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "952700",
+      "extracted": false,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "ymp8dbp7b",
+          "type": null,
+          "nameForms": [
+            {
+              "fullText": "Rowena Arcenal Argabioso",
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Rowena Arcenal"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Argabioso"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "9dn6zzpy8",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "place": {
+            "original": "Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "373535",
+      "extracted": false,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "jajo0if3z",
+          "type": null,
+          "nameForms": [
+            {
+              "fullText": "Chris Dominic Biticon Ella",
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Chris Dominic Biticon"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Ella"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "quigv018h",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "place": {
+            "original": "Philippines"
+          }
+        }
+      ]
+    },
+    {
+      "id": "643623",
+      "extracted": false,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Male"
+      },
+      "names": [
+        {
+          "id": "5533puk8g",
+          "type": null,
+          "nameForms": [
+            {
+              "fullText": "Felipe A Mia",
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Felipe A"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Mia"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "cpqo9hau1",
+          "type": "http://gedcomx.org/Birth",
+          "primary": false,
+          "place": {
+            "original": "Majayjay, Laguna, Philippines"
+          },
+          "date": {
+            "original": "1903"
+          },
+          "value": null,
+          "qualifiers": null
+        },
+        {
+          "id": "i29zg3p6s",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "place": {
+            "original": "Philippines"
+          },
+          "date": {
+            "original": "20 May 1949"
+          },
+          "value": null,
+          "qualifiers": null
+        }
+      ]
+    },
+    {
+      "id": "635021",
+      "extracted": false,
+      "principal": false,
+      "gender": {
+        "type": "http://gedcomx.org/Female"
+      },
+      "names": [
+        {
+          "id": "pimc0zk5a",
+          "type": null,
+          "nameForms": [
+            {
+              "fullText": "Petronila Bojo",
+              "parts": [
+                {
+                  "type": "http://gedcomx.org/Given",
+                  "value": "Petronila"
+                },
+                {
+                  "type": "http://gedcomx.org/Surname",
+                  "value": "Bojo"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "id": "88iuszdza",
+          "type": "http://gedcomx.org/Death",
+          "primary": false,
+          "place": {
+            "original": "Philippines"
+          }
+        },
+        {
+          "id": "2rjnk9qwt",
+          "type": "http://gedcomx.org/Birth",
           "primary": false,
           "place": {
             "original": "Philippines"
@@ -12350,6 +12595,113 @@
       "person2": {
         "resourceId": "453508",
         "resource": "#453508"
+      }
+    },
+    {
+      "id": "v447ophuf",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "894387",
+        "resource": "#894387"
+      },
+      "person2": {
+        "resourceId": "32262",
+        "resource": "#32262"
+      },
+      "facts": [
+        {
+          "id": "9m8g5kzjr",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "kzhj55kja",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "854282",
+        "resource": "#854282"
+      },
+      "person2": {
+        "resourceId": "952700",
+        "resource": "#952700"
+      },
+      "facts": [
+        {
+          "id": "6zjz8bg23",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "7v3f6ln9h",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "507681",
+        "resource": "#507681"
+      },
+      "person2": {
+        "resourceId": "952700",
+        "resource": "#952700"
+      },
+      "facts": [
+        {
+          "id": "pbtef19kg",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "y82zq2u8a",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "754726",
+        "resource": "#754726"
+      },
+      "person2": {
+        "resourceId": "373535",
+        "resource": "#373535"
+      },
+      "facts": [
+        {
+          "id": "qfoi1lsmb",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "pgo3ikmv3",
+      "type": "http://gedcomx.org/ParentChild",
+      "person1": {
+        "resourceId": "529496",
+        "resource": "#529496"
+      },
+      "person2": {
+        "resourceId": "373535",
+        "resource": "#373535"
+      },
+      "facts": [
+        {
+          "id": "61r94p3fp",
+          "type": "http://gedcomx.org/BiologicalParent",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "01yxb8ih2",
+      "type": "http://gedcomx.org/Couple",
+      "person1": {
+        "resourceId": "643623",
+        "resource": "#643623"
+      },
+      "person2": {
+        "resourceId": "635021",
+        "resource": "#635021"
       }
     }
   ]

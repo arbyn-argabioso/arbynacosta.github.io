@@ -47,8 +47,11 @@ function updatePersons(query, isPush)
     });
 
     // Update title and URL
-    let newTitle = filteredResults.main.names[0].nameForms[0].fullText + ' | Family Tree';
-    $(document).prop('title', newTitle);
+    let newTitle = null
+    if (filteredResults.main) {
+      newTitle = filteredResults.main.names[0].nameForms[0].fullText + ' | Family Tree';
+      $(document).prop('title', newTitle);
+    }
     if (isPush) {
       window.history.pushState({state: 'new'}, newTitle, window.location.href.split('?')[0] + '?q=' + query);
     }
