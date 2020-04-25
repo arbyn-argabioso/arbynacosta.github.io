@@ -1,6 +1,13 @@
 @font-face {
 font-family: 'ProductSans';
 font-style: normal;
+font-weight: 400;
+src: local('Product Sans Regular'), url('../fonts/ProductSans-Regular.woff') format('woff');
+}
+
+@font-face {
+font-family: 'ProductSans';
+font-style: normal;
 font-weight: 500;
 src: local('Product Sans Medium'), url('../fonts/ProductSans-Medium.woff') format('woff');
 }
