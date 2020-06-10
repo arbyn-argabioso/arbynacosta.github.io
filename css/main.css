@@ -524,7 +524,7 @@ a:hover {
  + ---------------------------------------------------------------- */
 
 article {
-  page-break-before: always;
+  page-break-before: auto;
 }
 
 @media print {
@@ -555,5 +555,9 @@ article {
   .cv-header__container,
   .cv-content--light-gray {
       background: none;
+  }
+
+  .card:not(.card--highlight) .card__description-details {
+    display: unset;
   }
 }
