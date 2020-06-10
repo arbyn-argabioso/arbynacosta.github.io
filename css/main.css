@@ -70,7 +70,7 @@ a:hover {
   color: var(--cv-text-color-link-hover);
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   body {
       font-size: 1.125rem;
   }
@@ -114,7 +114,7 @@ a:hover {
   padding-top: 0;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .cv-section__title-container {
       width: calc(100% - 2.125rem);
   }
@@ -134,13 +134,13 @@ a:hover {
   padding-bottom: 3rem;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .cv-section {
       padding-bottom: 4rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .cv-section {
       max-width: 80rem;
   }
@@ -202,7 +202,7 @@ a:hover {
   width: calc(100% - 2rem);
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .cv-header__content {
     width: calc(100% - 1.875rem);
     float: left;
@@ -224,7 +224,7 @@ a:hover {
   }
 }
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .cv-section__title {
     width: calc(66.66667% - 1.5625rem);
     float: left;
@@ -233,7 +233,7 @@ a:hover {
   }
 }
 
-@media (min-width: 1366px) {
+@media screen and (min-width: 1366px) {
   .cv-header__content {
     width: calc(100% - 2.5rem);
     float: left;
@@ -422,7 +422,7 @@ a:hover {
   background-size: cover;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .card-group {
       margin-bottom: -.9375rem;
       width: calc(100% - 2.125rem);
@@ -511,10 +511,49 @@ a:hover {
   }
 }
 
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .card {
       width: calc(33.33333% - 1.25rem);
       float: left;
       margin-left: .9375rem;
+  }
+}
+
+/* ---------------------------------------------------------------- +
+ | Print Styles                                                     |
+ + ---------------------------------------------------------------- */
+
+article {
+  page-break-before: always;
+}
+
+@media print {
+  article:not(:first-child) {
+    padding-top: 3rem;
+  }
+
+  article:not(:first-child) .cv-content {
+    padding-top: 0;
+  }
+}
+
+@media print {
+  .card--titleless .card__title {
+    display: unset;
+  }
+
+  .card--titleless.card:first-of-type .card__title + .card__body-notes,
+  .card--titleless .card__title + .card__body-notes {
+    margin-top: 0;
+  }
+
+  .card__image-container,
+  .open-link {
+      display: none;
+  }
+
+  .cv-header__container,
+  .cv-content--light-gray {
+      background: none;
   }
 }
