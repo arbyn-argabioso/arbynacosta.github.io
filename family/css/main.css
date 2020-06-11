@@ -132,7 +132,7 @@ body {
 
 .person .person-details .displayname {
   font-size: 0.75rem;
-  font-family: 'ProductSans', sans-serif;
+  font-family: Google Sans, sans-serif;
   font-weight: 600;
   line-height: 1.1;
   margin: 0;
@@ -189,7 +189,7 @@ a.person:hover .liferange {
   box-sizing: border-box;
   color: rgba(0, 0, 0, 0.87);
   -webkit-backface-visibility: hidden;
-  font-family: 'ProductSans', sans-serif;
+  font-family: Google Sans, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   left: 9px;
@@ -239,7 +239,7 @@ a.person:hover .liferange {
 #search-form-input {
   border: 0;
   color: rgba(0, 0, 0, 0.87);
-  font-family: 'ProductSans', sans-serif;
+  font-family: Google Sans, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   margin: 0 !important;
