@@ -319,7 +319,7 @@ a:hover {
 }
 
 .card--titleless .card__title {
-  display: none;
+/*   display: none; */
 }
 
 .card:first-of-type .card__image-container + .card__text .card__body-notes,
