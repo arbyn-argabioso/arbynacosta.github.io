@@ -455,14 +455,7 @@ a:hover {
     margin-left: .9375rem;
     overflow: hidden;
     padding-top: 0;
-    transition: box-shadow 150ms linear;
     width: calc(50% - 1.40625rem);
-  }
-
-  .card:hover {
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08),
-                0 0 15px 0 rgba(0, 0, 0, .02),
-                0 0 20px 4px rgba(0, 0, 0, .06);
   }
 
   .card--titleless {
