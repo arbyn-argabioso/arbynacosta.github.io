@@ -173,7 +173,7 @@ a:hover {
 .cv-header__subtitle {
   font-family: var(--cv-text-font-family-special);
   font-size: .875rem;
-  font-style: unset;
+  font-style: normal;
   font-weight: 400;
   letter-spacing: .00563rem;
   line-height: 1.25rem;
@@ -433,7 +433,7 @@ a:hover {
   }
 
   .card:not(:first-of-type) .card__image-container {
-    display: unset;
+    display: block;
   }
 
   .card:not(.card--no-hl):not(.card--highlight):not(.card--titleless):not(.card--continuation) .card__title {
@@ -490,7 +490,7 @@ a:hover {
   }
 
   .card:not(.card--highlight) .card__description-details {
-    display: unset;
+    display: inline;
   }
 
   .card__footer {
@@ -516,11 +516,16 @@ a:hover {
  | Print Styles                                                     |
  + ---------------------------------------------------------------- */
 
-article {
-  page-break-before: auto;
-}
-
 @media print {
+  @page {
+    size: A4;
+    margin: 0.5in;
+  }
+
+  article {
+    page-break-before: auto;
+  }
+
   article:not(:first-child) {
     padding-top: 3rem;
   }
@@ -528,11 +533,9 @@ article {
   article:not(:first-child) .cv-content {
     padding-top: 0;
   }
-}
 
-@media print {
   .card--titleless .card__title {
-    display: unset;
+    display: block;
   }
 
   .card--titleless.card:first-of-type .card__title + .card__body-notes,
@@ -551,6 +554,6 @@ article {
   }
 
   .card:not(.card--highlight) .card__description-details {
-    display: unset;
+    display: inline;
   }
 }
