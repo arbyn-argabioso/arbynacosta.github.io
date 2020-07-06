@@ -41,8 +41,8 @@ const style = {
     },
 
     // Item height and width in pixels
-    height: 141.4,
-    width: 82.62,
+    height: 156.4,
+    width: 92.62,
   },
 
   dot: {

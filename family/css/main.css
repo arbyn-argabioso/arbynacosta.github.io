@@ -113,7 +113,7 @@ body {
 .person .person-details .person-details-container {
   border-radius: 0 0 8px 8px;
   display: table-cell;
-  padding: 0.67rem 0.57rem 0.57rem; /* 0.85rem; */
+  padding: 0.72rem 0.62rem 0.62rem; /* 0.85rem; */
   vertical-align: middle;
   width: 100%;
 }
@@ -131,7 +131,7 @@ body {
 }
 
 .person .person-details .displayname {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-family: Google Sans, sans-serif;
   font-weight: 700;
   line-height: 1.1;
@@ -311,16 +311,16 @@ a.person:hover .liferange {
   background-position: -72px 0;
 }
 
-#search-button:active::before, 
+#search-button:active::before,
 #search-button:hover::before,
 #search-button:focus::before,
-#home-button:active::before, 
+#home-button:active::before,
 #home-button:hover::before,
 #home-button:focus::before {
   cursor: pointer;
 }
 
-#search-button:active::before, 
+#search-button:active::before,
 #search-button:hover::before,
 #search-button:focus::before {
   background-position: -24px 0;
@@ -330,7 +330,7 @@ a.person:hover .liferange {
   background-position: 0 0;
 }
 
-#search-button:disabled:active::before, 
+#search-button:disabled:active::before,
 #search-button:disabled:hover::before,
 #search-button:disabled:focus::before {
   cursor: default;
