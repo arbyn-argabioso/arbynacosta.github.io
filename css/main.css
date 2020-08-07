@@ -10,6 +10,7 @@ html {
   overflow-y: scroll;
   font-size: 12px;
   width: 100%;
+  zoom: 0.66;
 }
 
 body {
@@ -225,11 +226,14 @@ h1, h2, h3, h4, h5 {
 /*
  * Mobile-friendly media setup.
  */
-@media screen and (min-width: 600px) {
-}
-
-@media screen and (min-width: 1060px) {
-}
+@media screen and (min-width: 340px) { html { zoom: 0.708; } }
+@media screen and (min-width: 360px) { html { zoom: 0.750; } }
+@media screen and (min-width: 380px) { html { zoom: 0.791; } }
+@media screen and (min-width: 400px) { html { zoom: 0.833; } }
+@media screen and (min-width: 420px) { html { zoom: 0.875; } }
+@media screen and (min-width: 440px) { html { zoom: 0.916; } }
+@media screen and (min-width: 460px) { html { zoom: 0.958; } }
+@media screen and (min-width: 480px) { html { zoom: 1.000; } }
 
 @media screen and (min-width: 1060px), print {
   .resume {

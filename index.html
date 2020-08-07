@@ -145,32 +145,5 @@
       </div>
     </div>
   </div>
-
-  <script
-  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-  crossorigin="anonymous"></script>
-
-  <script>
-    // Adjust zoom on page load
-    $(function () {
-      adaptiveWidthZoom();
-    });
-
-    // Adjust zoom on resize
-    $(window).resize(function() {
-      adaptiveWidthZoom();
-    });
-
-    function adaptiveWidthZoom() {
-      const TARGET_MIN_WIDTH = 480;
-
-      if ($(window).width() < TARGET_MIN_WIDTH) {
-        $("html").css({
-          "zoom": $(document).width() / TARGET_MIN_WIDTH
-        });
-      }
-    }
-  </script>
 </body>
 </html>
