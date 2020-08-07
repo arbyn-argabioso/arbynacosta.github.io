@@ -9,6 +9,7 @@
 html {
   overflow-y: scroll;
   font-size: 12px;
+  width: 100%;
 }
 
 body {
