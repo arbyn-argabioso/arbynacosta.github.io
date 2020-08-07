@@ -168,6 +168,11 @@ h1, h2, h3, h4, h5 {
   position: relative;
 }
 
+.resume__content-section div > header p {
+  width: 70%;
+  word-break: break-word;
+}
+
 .resume__content-section div > p {
   margin-bottom: 12px;
 }
@@ -254,9 +259,10 @@ h1, h2, h3, h4, h5 {
   }
 
   .resume__programming-languages {
+    padding-top: 0;
     position: absolute;
-    top: 40px;
     right: 0;
+    top: 32px;
   }
 
   .resume__content {
