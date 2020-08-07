@@ -212,6 +212,11 @@ h1, h2, h3, h4, h5 {
   top: 0;
 }
 
+.resume__note,
+.resume__note a {
+  font-size: 12px;
+}
+
 /*
  * Mobile-friendly media setup.
  */
