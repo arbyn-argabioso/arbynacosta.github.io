@@ -307,6 +307,19 @@ h1, h2, h3, h4, h5 {
     box-shadow: none;
     margin: 0;
   }
+
+  html {
+    zoom: 0.85;
+  }
+
+  html,
+  body,
+  .resume {
+    background: #fff;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 /*
