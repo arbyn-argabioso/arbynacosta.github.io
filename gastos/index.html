@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="initial-scale=1, minimum-scale=1, width=device-width" name="viewport">
+  <meta name="google-signin-client_id" content="917002517744-5i6vfhcnsms7n3mhch3etsiat48v1gk1.apps.googleusercontent.com">
 
   <title>Gastos</title>
 
@@ -93,6 +94,11 @@
     #record-expense {
       font-size: 16px;
     }
+
+    .hidden {
+      display: none !important;
+      visibility: hidden !important;
+    }
   </style>
 </head>
 
@@ -106,12 +112,12 @@
             <div class="mdc-card-wrapper">
 
               <div class="mdc-card-wrapper__text-section">
-                <h2 id="app-title">Record your Gastos</h2>
+                <h2 id="app-title">Record your expenses</h2>
               </div>
 
               <div class="mdc-card-wrapper__text-section">
                 <label class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
-                  <input type="text" class="mdc-text-field__input" aria-labelledby="expense-type">
+                  <input type="text" class="mdc-text-field__input" aria-labelledby="expense-type" name="expense-type">
                   <span class="mdc-notched-outline">
                     <span class="mdc-notched-outline__leading"></span>
                     <span class="mdc-notched-outline__notch">
@@ -124,7 +130,7 @@
 
               <div class="mdc-card-wrapper__text-section">
                 <label class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
-                  <input type="number" step=".01" class="mdc-text-field__input" aria-labelledby="expense-amount">
+                  <input type="number" step=".01" class="mdc-text-field__input" aria-labelledby="expense-amount" name="expense-amount">
                   <span class="mdc-notched-outline">
                     <span class="mdc-notched-outline__leading"></span>
                     <span class="mdc-notched-outline__notch">
@@ -136,7 +142,7 @@
               </div>
 
               <div class="mdc-card-wrapper__text-section" style="text-align: right;">
-                <button class="mdc-button mdc-button--raised" id="record-expense" data-mdc-auto-init="MDCRipple">
+                <button class="mdc-button mdc-button--raised g-signin2" id="record-expense" data-mdc-auto-init="MDCRipple" data-onsuccess="onSignIn">
                   <span class="mdc-button__label">Record</span>
                   <div class="mdc-button__ripple"></div>
                 </button>
@@ -155,17 +161,31 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'UA-177356457-2');
+    gtag('js', new Date());
+    gtag('config', 'UA-177356457-2', {
+      'user_id': 12345
+    });
   </script>
 
   <script src="https://unpkg.com/material-components-web@7.0.0/dist/material-components-web.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   <script>
+    window.profile = null;
     window.onload = function() {
       window.mdc.autoInit();
     }
+
+    $('#record-expense').on('click', function() {
+      let expenseType = $('[name="expense-type"]').parent()[0].MDCTextField.value;
+      let expenseAmount = $('[name="expense-amount"]').parent()[0].MDCTextField.value;
+
+      gtag('event', 'record_expense', {
+        'event_category': 'expense',
+        'event_label': expenseType,
+        'value': parseInt(expenseAmount)
+      });
+    });
   </script>
 </body>
 
