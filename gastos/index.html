@@ -103,6 +103,18 @@
 </head>
 
 <body>
+  <div class="mdc-snackbar">
+    <div class="mdc-snackbar__surface">
+      <div class="mdc-snackbar__label" role="status" aria-live="polite">Expense recorded.</div>
+      <div class="mdc-snackbar__actions">
+        <button type="button" class="mdc-button mdc-snackbar__action">
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label">Ok</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <main>
 
     <div class="mdc-layout-grid mdc-form--centered">
@@ -116,12 +128,12 @@
               </div>
 
               <div class="mdc-card-wrapper__text-section">
-                <label class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
-                  <input type="text" class="mdc-text-field__input" aria-labelledby="expense-type" name="expense-type">
+                <label class="mdc-text-field mdc-text-field--outlined" id="expense-type">
+                  <input type="text" class="mdc-text-field__input" aria-labelledby="expense-type__label" name="expense-type">
                   <span class="mdc-notched-outline">
                     <span class="mdc-notched-outline__leading"></span>
                     <span class="mdc-notched-outline__notch">
-                      <span class="mdc-floating-label" id="expense-type">Expense Type</span>
+                      <span class="mdc-floating-label" id="expense-type__label">Expense Type</span>
                     </span>
                     <span class="mdc-notched-outline__trailing"></span>
                   </span>
@@ -129,12 +141,12 @@
               </div>
 
               <div class="mdc-card-wrapper__text-section">
-                <label class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
-                  <input type="number" step=".01" class="mdc-text-field__input" aria-labelledby="expense-amount" name="expense-amount">
+                <label class="mdc-text-field mdc-text-field--outlined" id="expense-amount">
+                  <input type="number" step=".01" class="mdc-text-field__input" aria-labelledby="expense-amount__label" name="expense-amount">
                   <span class="mdc-notched-outline">
                     <span class="mdc-notched-outline__leading"></span>
                     <span class="mdc-notched-outline__notch">
-                      <span class="mdc-floating-label" id="expense-amount">Expense Amount</span>
+                      <span class="mdc-floating-label" id="expense-amount__label">Expense Amount</span>
                     </span>
                     <span class="mdc-notched-outline__trailing"></span>
                   </span>
@@ -176,14 +188,23 @@
       window.mdc.autoInit();
     }
 
-    $('#record-expense').on('click', function() {
-      let expenseType = $('[name="expense-type"]').parent()[0].MDCTextField.value;
-      let expenseAmount = $('[name="expense-amount"]').parent()[0].MDCTextField.value;
+    const snackbar = new mdc.snackbar.MDCSnackbar(document.querySelector('.mdc-snackbar'));
+    const expenseType = new mdc.textField.MDCTextField(document.querySelector('#expense-type'));
+    const expenseAmount = new mdc.textField.MDCTextField(document.querySelector('#expense-amount'));
 
+    $('#record-expense').on('click', function() {
       gtag('event', 'record_expense', {
         'event_category': 'expense',
-        'event_label': expenseType,
-        'value': parseInt(expenseAmount)
+        'event_label': expenseType.value,
+        'value': parseInt(expenseAmount.value),
+        'event_callback': function() {
+          // Notify user
+          snackbar.open();
+
+          // Clear inputs
+          expenseType.value = '';
+          expenseAmount.value = '';
+        }
       });
     });
   </script>
