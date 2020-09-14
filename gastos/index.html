@@ -116,12 +116,11 @@
   </div>
 
   <main>
-
     <div class="mdc-layout-grid mdc-form--centered">
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
           <div class="mdc-card mdc-card--outlined">
-            <div class="mdc-card-wrapper">
+            <form class="mdc-card-wrapper">
 
               <div class="mdc-card-wrapper__text-section">
                 <h2 id="app-title">Record your expenses</h2>
@@ -129,7 +128,7 @@
 
               <div class="mdc-card-wrapper__text-section">
                 <label class="mdc-text-field mdc-text-field--outlined" id="expense-type">
-                  <input type="text" class="mdc-text-field__input" aria-labelledby="expense-type__label" name="expense-type">
+                  <input type="text" class="mdc-text-field__input" aria-labelledby="expense-type__label" name="expense-type" autocomplete="on">
                   <span class="mdc-notched-outline">
                     <span class="mdc-notched-outline__leading"></span>
                     <span class="mdc-notched-outline__notch">
@@ -154,13 +153,13 @@
               </div>
 
               <div class="mdc-card-wrapper__text-section" style="text-align: right;">
-                <button class="mdc-button mdc-button--raised g-signin2" id="record-expense" data-mdc-auto-init="MDCRipple" data-onsuccess="onSignIn">
+                <button class="mdc-button mdc-button--raised" id="record-expense" data-mdc-auto-init="MDCRipple">
                   <span class="mdc-button__label">Record</span>
                   <div class="mdc-button__ripple"></div>
                 </button>
               </div>
 
-            </div>
+            </form>
           </div>
         </div>
       </div>
