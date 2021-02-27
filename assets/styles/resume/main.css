@@ -1,0 +1,340 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+      box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  font-size: 12px;
+  width: 100%;
+  zoom: 0.66;
+}
+
+body {
+  background: #f8f9fa;
+  color: #202124;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .2px;
+  line-height: 18px;
+}
+
+h4 {
+  font-size: 16px;
+  letter-spacing: .2px;
+  line-height: 18px;
+}
+
+h1, h2, h3,
+h4, h5, h6,
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  display: block;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+
+.resume {
+  background-color: #fff;
+}
+
+/*
+ * CV header.
+ */
+
+.resume__header {
+  border-bottom: 1px solid #dadce0;
+  margin: 0 20px;
+  padding: 20px 0 20px;
+  position: relative;
+}
+
+.resume__title {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: unset;
+  display: block;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: 30px;
+  margin-bottom: 9px;
+  overflow: hidden;
+}
+
+.resume__header-details {
+  font-size: 14px;
+  line-height: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.resume__header-details > li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: flex;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.resume a {
+  font-size: 14px;
+  color: inherit;
+  text-decoration: none;
+  font-family: Inconsolata, Consolas, monospace;
+  letter-spacing: -0.1px;
+  word-break: break-all;
+}
+
+.resume__header-details > li > i {
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: block;
+  color: #bdc1c6;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.resume__programming-languages {
+  padding-top: 12px;
+  position: relative;
+}
+
+.resume__programming-languages ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.resume__programming-languages li {
+  direction: rtl;
+  display: inline-flex;
+  padding: 7px 12px;
+  border-radius: 16px;
+  background-color: #e0e0e0;
+  margin: 0 2px 4px;
+}
+
+.resume__programming-languages li:first-of-type {
+  margin-left: 0;
+}
+
+.resume__programming-languages li:last-of-type {
+  margin-right: 0;
+}
+
+/*
+ * CV body.
+ */
+
+.resume__content {
+  padding: 20px 20px 20px;
+}
+
+.resume__content-section > header > h3,
+.resume__content-section > header > h4 {
+  color: #1a73e8;
+  padding-bottom: 12px;
+}
+
+.resume__content-section,
+.resume__content-section > p {
+  margin-bottom: 20px;
+}
+
+.resume__content-section {
+  border-bottom: 1px solid #dadce0;
+  font-size: 14px;
+  line-height: 18px;
+  padding-bottom: 8px;
+}
+
+.resume__content-section:last-of-type,
+.resume__content-section:last-of-type > *:last-child,
+.resume__content-section:last-of-type > *:last-child > *:last-child {
+  border-bottom-color: transparent;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.resume__content-section div > header {
+  font-weight: 600;
+  position: relative;
+}
+
+.resume__content-section div > header p {
+  width: 70%;
+  word-break: break-word;
+}
+
+.resume__content-section div > div > header p {
+  font-weight: 500;
+}
+
+.resume__content-section div > p {
+  margin-bottom: 12px;
+}
+
+.resume__content-section div > div:first-of-type header {
+  margin-top: 10px;
+}
+
+.resume__content-section ul {
+  list-style-type: none;
+  margin: 10px 0 12px;
+  padding-left: 18px;
+}
+
+.resume__content-section > div > ul:first-child {
+  margin-top: 0;
+}
+
+.resume__content-section li {
+  margin-bottom: 1em;
+  text-indent: -16px;
+}
+
+.resume__content-section li:before {
+  color: #dadce0;
+  content: "\2022";
+  display: inline;
+  font-size: 16px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.resume__content-section strong {
+  font-weight: 500;
+}
+
+.resume__entry-datetime {
+  font-weight: inherit;
+  font-size: inherit;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.resume__content-section div > div > header p + .resume__entry-datetime {
+  font-weight: 500;
+}
+
+.resume__note,
+.resume__note a {
+  font-size: 12px;
+}
+
+/*
+ * Mobile-friendly media setup.
+ */
+@media screen and (min-width: 340px) { html { zoom: 0.708; } }
+@media screen and (min-width: 360px) { html { zoom: 0.750; } }
+@media screen and (min-width: 380px) { html { zoom: 0.791; } }
+@media screen and (min-width: 400px) { html { zoom: 0.833; } }
+@media screen and (min-width: 420px) { html { zoom: 0.875; } }
+@media screen and (min-width: 440px) { html { zoom: 0.916; } }
+@media screen and (min-width: 460px) { html { zoom: 0.958; } }
+@media screen and (min-width: 480px) { html { zoom: 1.000; } }
+
+@media screen and (min-width: 1060px), print {
+  .resume {
+    border-radius: 3px;
+    box-shadow: 0 1px 6px rgba(60, 64, 67, 0.28);
+    margin: 40px auto;
+    padding: 0;
+    width: 980px;
+  }
+
+  .resume__page {
+    border-radius: 8px;
+    height: 1268.2353px;
+  }
+
+  .resume__header {
+    margin: 0 40px;
+    padding: 32px 0 16px;
+  }
+
+  .resume__header-details > li {
+    margin-right: 20px;
+  }
+
+  .resume__header-details > li:last-child {
+    margin-right: 0;
+  }
+
+  .resume__programming-languages {
+    padding-top: 0;
+    position: absolute;
+    right: 0;
+    top: 32px;
+  }
+
+  .resume__content {
+    padding: 20px 40px 40px;
+  }
+
+  .resume__header,
+  .resume__content-section {
+    border-bottom: 1px solid #dadce0;
+  }
+
+  .resume__content-section {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .resume__content-section div > div header > p {
+    padding-left: 20px;
+  }
+
+  .resume__content-section ul {
+    padding-left: 40px;
+  }
+
+  .resume__content-section li {
+    margin-bottom: 0;
+    text-indent: -18px;
+  }
+
+  .resume__content-section li:before {
+    font-size: 22px;
+  }
+}
+
+@media print {
+  .resume {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  html {
+    zoom: 0.85;
+  }
+
+  html,
+  body,
+  .resume {
+    background: #fff;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/*
+ * Utilities.
+ */
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}

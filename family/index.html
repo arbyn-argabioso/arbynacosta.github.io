@@ -1,60 +1,66 @@
 ​<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#222222" />
+<html lang="en-us">
 
-    <title>Arbyn Acosta Argabioso &#124; Family Tree</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#222222" />
+  <meta name="google-site-verification" content="tPF4MkMFOKSA1UpzqhOkmaLuZyXORthRVe-GqmqBDhE" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400&display=swap" />
-    <link rel="stylesheet" href="../css/fonts.css" />
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
+  <link rel="shortcut icon" href="../assets/icons/favicon.ico" />
 
-  <body>
-    <div id="tree"></div>
+  <title>Arbyn Acosta Argabioso - Family Tree</title>
 
-    <div id="search" class="hidden">
-      <form id="search-form">
-        <input value="" placeholder="Search Family Tree" autocomplete="off" id="search-form-input" name="q" dir="ltr" spellcheck="false" type="text">
-      </form>
-      <div id="search-button-container">
-        <button aria-label="Search" id="search-button" form="search-form" type="submit"></button>
-      </div>
-      <div id="home-button-container">
-        <a id="home-button" form="search-form" type="submit"></a>
-      </div>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400&display=swap" />
+
+  <link rel="stylesheet" href="../assets/styles/common/fonts.css" />
+  <link rel="stylesheet" href="../assets/styles/family/main.css" />
+</head>
+
+<body>
+  <div id="tree"></div>
+
+  <div id="search" class="hidden">
+    <form id="search-form">
+      <input value="" placeholder="Search Family Tree" autocomplete="off" id="search-form-input" name="q" dir="ltr" spellcheck="false" type="text">
+    </form>
+    <div id="search-button-container">
+      <button aria-label="Search" id="search-button" form="search-form" type="submit"></button>
     </div>
+    <div id="home-button-container">
+      <a id="home-button" form="search-form" type="submit"></a>
+    </div>
+  </div>
 
-    <footer class="hidden">
-      <span>Family Data &copy; <span id="datestamp">2020</span></span>
-    </footer>
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177356457-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <footer class="hidden">
+    <span>Family Data &copy; <span id="datestamp">2021</span></span>
+  </footer>
 
-      gtag('config', 'UA-177356457-1');
-    </script>
-  </body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177356457-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-177356457-1');
+  </script>
 
   <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
 
-  <script src="js/plugins/primitives.js"></script>
+  <script src="../assets/scripts/family/primitives.js"></script>
 
-  <script src="js/utils.js"></script>
-  <script src="js/configs.js"></script>
+  <script src="../assets/scripts/family/utils.js"></script>
+  <script src="../assets/scripts/family/configs.js"></script>
 
-  <script src="js/preprocess.js"></script>
-  <script src="js/template.js"></script>
-  <script src="js/filter.js"></script>
+  <script src="../assets/scripts/family/preprocess.js"></script>
+  <script src="../assets/scripts/family/template.js"></script>
+  <script src="../assets/scripts/family/filter.js"></script>
 
-  <script src="js/main.js"></script>
+  <script src="../assets/scripts/family/main.js"></script>
+</body>
+
 </html>

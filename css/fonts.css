@@ -3,7 +3,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: local('Google Sans Italic'), local('GoogleSans-Italic'), url(../fonts/googlesans/v16/4UaErENHsxJlGDuGo1OIlL3Lwpg.woff) format('woff');
+  src: local('Google Sans Italic'), local('GoogleSans-Italic'), url(../assets/fonts/googlesans/v16/4UaErENHsxJlGDuGo1OIlL3Lwpg.woff) format('woff');
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: local('Google Sans Medium Italic'), local('GoogleSans-MediumItalic'), url(../fonts/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-m93CwA.woff) format('woff');
+  src: local('Google Sans Medium Italic'), local('GoogleSans-MediumItalic'), url(../assets/fonts/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-m93CwA.woff) format('woff');
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: local('Google Sans Bold Italic'), local('GoogleSans-BoldItalic'), url(../fonts/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-idxCwA.woff) format('woff');
+  src: local('Google Sans Bold Italic'), local('GoogleSans-BoldItalic'), url(../assets/fonts/googlesans/v16/4UaZrENHsxJlGDuGo1OIlL3L-idxCwA.woff) format('woff');
 }
 
 @font-face {
@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(../fonts/googlesans/v16/4UaGrENHsxJlGDuGo1OIlI3K.woff) format('woff');
+  src: local('Google Sans Regular'), local('GoogleSans-Regular'), url(../assets/fonts/googlesans/v16/4UaGrENHsxJlGDuGo1OIlI3K.woff) format('woff');
 }
 
 @font-face {
@@ -35,7 +35,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: local('Google Sans Medium'), local('GoogleSans-Medium'), url(../fonts/googlesans/v16/4UabrENHsxJlGDuGo1OIlLU94bt3.woff) format('woff');
+  src: local('Google Sans Medium'), local('GoogleSans-Medium'), url(../assets/fonts/googlesans/v16/4UabrENHsxJlGDuGo1OIlLU94bt3.woff) format('woff');
 }
 
 @font-face {
@@ -43,5 +43,5 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Google Sans Bold'), local('GoogleSans-Bold'), url(../fonts/googlesans/v16/4UabrENHsxJlGDuGo1OIlLV157t3.woff) format('woff');
+  src: local('Google Sans Bold'), local('GoogleSans-Bold'), url(../assets/fonts/googlesans/v16/4UabrENHsxJlGDuGo1OIlLV157t3.woff) format('woff');
 }
