@@ -26,6 +26,9 @@ const classes = {
   details: 'person-details',
   displayname: 'displayname',
   liferange: 'liferange',
+
+  fullname: 'fullname',
+  fullLifeRange: 'fullLifeRange',
 };
 
 const template = function()
@@ -69,7 +72,7 @@ const template = function()
         'class': [classes.details],
         'style': {
           'height': (result.itemSize.height - result.itemSize.width) + 'px',
-        }
+        },
       },
       [
         'div', {
@@ -115,6 +118,8 @@ const template = function()
       let itemPropertyName = $(this).attr('name');
       $(this).text(item[itemPropertyName]);
     });
+
+    itemElement.attr('title', item['description']);
 
     // Add special highlight class based on importance
     let importance = item['importance'];

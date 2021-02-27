@@ -28,6 +28,42 @@ function getItemizedArray(array)
 }
 
 /*
+ * Generates a short description
+ * for the given person. For now,
+ * it just uses the full name and
+ * when the person is born.
+ */
+function generateDescription(person)
+{
+  'use strict';
+
+  let fullname = getFullName(person);
+  let fullBirthDate = getFullLifeRange(person);
+  if (fullBirthDate) {
+    return fullname + ' was born on ' + fullBirthDate + '.';
+  }
+  return fullname;
+}
+
+/*
+ * Simply return the full name.
+ */
+function getFullName(person)
+{
+  'use strict';
+  return person.names[0].nameForms[0].fullText;
+}
+
+/*
+ * Simply return the full name.
+ */
+function getFullLifeRange(person)
+{
+  'use strict';
+  return null;
+}
+
+/*
  * Applies a name shortener to allow display
  * on the small item area.
  */
@@ -236,6 +272,9 @@ function addDisplayDetails(persons)
     person.displayname = getDisplayName(person, style.name.lengthThreshold);
     person.displaygender = getDisplayGender(person);
     person.liferange = getLifeRange(person);
+
+    // For hover details
+    person.description = generateDescription(person);
   }
 
   return persons;
