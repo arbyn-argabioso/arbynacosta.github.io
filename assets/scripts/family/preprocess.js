@@ -22,7 +22,9 @@ function getItemizedArray(array)
   let result = [];
   for (let i = 0, imax = array.length; i < imax; i++) {
     array[i].idx = i;
-    result.push(new primitives.famdiagram.ItemConfig(array[i]));
+    let itemConfiguration = new primitives.famdiagram.ItemConfig(array[i]);
+    itemConfiguration['relativeItem'] = itemConfiguration.spouses[0];
+    result.push(itemConfiguration);
   }
   return result;
 }
@@ -209,6 +211,9 @@ function addRelationship(person, relationship, gedcomProperty, personProperty)
   }
 
   let personId = relationship.person1.resourceId;
+  if (personId == person.id) {
+    personId = relationship.person2.resourceId;
+  }
   if (person[personProperty]) {
     person[personProperty].push(personId);
   }
@@ -235,11 +240,13 @@ function addRelationships(persons, relationships)
 
   for (let i = 0, imax = relationships.length; i < imax; i++) {
     let relationship = relationships[i];
-    let person = persons.getby(relationship.person2.resourceId);
+    let person1 = persons.getby(relationship.person1.resourceId);
+    let person2 = persons.getby(relationship.person2.resourceId);
 
     // addRelationship(person, relationship, grandParentProperty, 'gparents');
-    addRelationship(person, relationship, parentProperty, 'parents');
-    addRelationship(person, relationship, spouseProperty, 'spouses');
+    addRelationship(person2, relationship, parentProperty, 'parents');
+    addRelationship(person1, relationship, spouseProperty, 'spouses');
+    addRelationship(person2, relationship, spouseProperty, 'spouses');
   }
 
   // Special case for siblings
