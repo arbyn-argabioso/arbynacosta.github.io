@@ -1,128 +1,138 @@
-let control = null;
-let event = new Event('loaded');
-
-function updatePersons(query, isPush)
-{
-  // Make sure query is not null or undefined
-  if (!query) {
-    query = '';
-  }
-
-  // Action of update, whether push or pop
-  if (isPush == null || isPush == undefined) {
-    isPush = true;
-  }
-
-  $.getJSON('https://api.jsonbin.io/b/5e58ed5b09ac43054813b795/latest', function(gedcom)
-  {
-    'use strict';
-
-    // Update configuration
-    let options = new primitives.famdiagram.Config();
-    options = Object.assign(options, config);
-
-    // Add data and apply preprocesses
-    let persons = addRelationships(gedcom.persons, gedcom.relationships);
-    persons = getItemizedArray(persons);
-
-    let filteredResults = filterPersons(query, persons);
-    options.items = addDisplayDetails(filteredResults.persons);
-    options.annotations = filteredResults.annotations;
-
-    // Template to options
-    options.defaultTemplateName = template.name;
-    options.onItemRender = template.render;
-    options.templates = [template];
-
-    $("#tree").animate({
-      opacity: 0,
-    }, 200, function() {
-      $("#tree").empty();
-      control = primitives.famdiagram.Control(document.getElementById('tree'), options, function() {
-        // Scroll to main item
-        let scrollableElement = $('#tree').children().first().children().first();
-        $('#tree').children().first().scrollTop((scrollableElement.height() - $(window).height()) / 2);
-        $('#tree').children().first().scrollLeft((scrollableElement.width() - $(window).width()) / 2);
-        $("#tree").animate({opacity: 1});
-
-        // Update title and URL
-        let newTitle = null
-        if (filteredResults.main) {
-          newTitle = filteredResults.main.names[0].nameForms[0].fullText + ' - Family Tree';
-          $(document).prop('title', newTitle);
-        }
-        if (isPush) {
-          window.history.pushState({state: 'new'}, newTitle, window.location.href.split('?')[0] + '?q=' + query);
-        }
-
-        // Update family data datestamp
-        $('#datestamp').html(gedcom.datestamp);
-
-        // Remove hidden class on full loading family data
-        $('#search').removeClass('hidden');
-        $('body > footer').removeClass('hidden');
-      });
-    });
-  });
+// Some constants
+const subtractor = 2;
+const node = {
+  margin: 10 - subtractor,
+  height: 52 - subtractor,
+  width: 245 - (subtractor * 2),
+  background: '#ffffff'
 }
 
-$(document).ready(function($) {
-  let webTyped = true;
+// For conciseness. See the "Building Parts" intro page for more
+var $ = go.GraphObject.make;
 
-  // Do update on back button
-  window.onpopstate = function(event) {
-    webTyped = false;
-    updatePersons(window.location.get('q'), false);
-  };
-
-  // Disable search submission if the input is empty
-  $('#search-button').attr('disabled', 'disabled');
-  $('#search-form :input').on('keyup', function() {
-    let empty = false;
-
-    $('#search-form :input').each(function() {
-      empty = $(this).val().length == 0;
-    });
-
-    if (empty)
-      $('#search-button').attr('disabled', 'disabled');
-    else
-      $('#search-button').attr('disabled', false);
-  });
-
-  // Do update when search form is submitted
-  $("#search-form").submit(function(event) {
-    event.preventDefault();
-
-    // Get an associative array of just the values.
-    var values = {};
-    $('#search-form :input').each(function() {
-        values[this.name] = $(this).val();
-    });
-
-    webTyped = false;
-    updatePersons(values['q']);
-  });
-
-  // Do update when search form is submitted
-  $("#home-button").on('click', function(event) {
-    event.preventDefault();
-
-    webTyped = false;
-    updatePersons();
-  });
-
-  // Update on resize
-  let doit = null;
-  $(window).resize(function() {
-    clearTimeout(doit);
-    doit = setTimeout(function() {
-      control.update(primitives.common.UpdateMode.Refresh);
-    }, 100);
-  });
-
-  // Only do a separate update on first site enter
-  if (webTyped) {
-    updatePersons(window.location.get('q'));
+var tree = $(
+  go.Diagram,
+  "tree",
+  {
+    "undoManager.isEnabled": true,
+    padding: node.height - 10,
+    initialScale: 0.75,
+    layout: $(
+      go.TreeLayout, {
+        angle: 0,
+        layerSpacing: Math.max(parseInt(node.margin * 6), 20),
+        nodeSpacing: node.margin * 1.5,
+      }
+    )
   }
+);
+
+tree.addDiagramListener("ObjectSingleClicked", function(e) {
+  var part = e.subject.part;
+  if (!(part instanceof go.Link)) console.log("Clicked on " + part.data.key);
 });
+
+tree.nodeTemplate = $(
+  go.Node,
+  {
+    selectable: false,
+  },
+    new go.Binding('height', 'height'),
+    new go.Binding('width', 'width'),
+  $(
+    go.Shape,
+    {
+      desiredSize: new go.Size(node.width, node.height),
+      figure: 'RoundedRectangle',
+      fill: node.background,
+      stroke: null,
+      shadowVisible: true
+    }
+  ),
+  $(
+    go.Picture,
+    {
+      width: node.height,
+      height: node.height,
+      margin: new go.Margin(0.5, 0, 0, 0)
+    },
+    new go.Binding("source", function(nodeData) {
+      if (nodeData.image) {
+        return nodeData.image;
+      }
+      if (nodeData.gender.toUpperCase() == 'M') {
+        return 'https://raw.githubusercontent.com/arbynacosta/arbynacosta.github.io/master/assets/images/family/male.png';
+      }
+      return 'https://raw.githubusercontent.com/arbynacosta/arbynacosta.github.io/master/assets/images/family/female.png';
+    })
+  ),
+  $(
+    go.Shape,
+    {
+      desiredSize: new go.Size(4, node.height),
+      figure: "Rectangle",
+      stroke: null,
+      margin: new go.Margin(0, 0, 0, node.height - 1)
+    },
+    new go.Binding("fill", function(nodeData) {
+      return nodeData.gender.toUpperCase() == 'M' ? '#2799fd' : '#ea1a68';
+    })
+  ),
+  $(
+    go.TextBlock,
+    {
+      font: "700 14px Google Sans, sans-serif",
+      margin: new go.Margin(node.margin + 1, node.margin, 0, node.height + node.margin + 4),
+      maxSize: new go.Size(node.width - node.height, 24)
+    },
+    new go.Binding("text", function(nodeData) {
+      let middleInitialsArray  = nodeData.name.middle.trim().split(' ');
+      let middleInitialsString = '';
+
+      if (middleInitialsArray[0] != '') {
+        for (let i = 0; i < middleInitialsArray.length; i++) {
+          middleInitialsString += middleInitialsArray[i][0] + '. '
+        }
+      }
+
+      return nodeData.name.first + " " + middleInitialsString + nodeData.name.last;
+    })
+  ),
+  $(
+    go.TextBlock,
+    {
+      font: "400 12px Roboto, sans-serif",
+      margin: new go.Margin(25 + parseInt(node.margin / 2), node.margin, node.margin, node.height + node.margin + 4),
+      maxSize: new go.Size(node.width - node.height, 24)
+    },
+    new go.Binding("text", function(nodeData) {
+      return nodeData.lifespan + ' • ' + nodeData.key;
+    })
+  ),
+);
+
+// define a Link template that routes orthogonally, with no arrowhead
+tree.linkTemplate = $(
+  go.Link,
+  {
+    selectable: false,
+    routing: go.Link.Orthogonal,
+    corner: 0
+  },
+
+  // the link path, a Shape
+  $(
+    go.Shape,
+    {
+      strokeWidth: 1,
+      stroke: "#6a6a6a"
+    }
+  )
+);
+
+
+var model = $(go.TreeModel);
+model.nodeDataArray = TREE_DATA;
+tree.model = model;
+
+document.querySelector('footer').classList.remove("hidden");

@@ -1,4 +1,4 @@
-​<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-us">
 
 <head>
@@ -11,30 +11,24 @@
 
   <title>Arbyn Acosta Argabioso - Family Tree</title>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" />
 
   <link rel="stylesheet" href="../assets/styles/common/fonts.css" />
   <link rel="stylesheet" href="../assets/styles/family/main.css" />
 </head>
 
 <body>
-  <div id="tree"></div>
-
-  <div id="search" class="hidden">
-    <form id="search-form">
-      <input value="" placeholder="Search Family Tree" autocomplete="off" id="search-form-input" name="q" dir="ltr" spellcheck="false" type="text">
-    </form>
-    <div id="search-button-container">
-      <button aria-label="Search" id="search-button" form="search-form" type="submit"></button>
-    </div>
-    <div id="home-button-container">
-      <a id="home-button" form="search-form" type="submit"></a>
-    </div>
+  <div id="tree-wrapper">
+    <div id="tree"></div>
   </div>
 
   <footer class="hidden">
-    <span>Family Data &copy; <span id="datestamp">2021</span></span>
+    <span>Arbyn Acosta Argabioso - Family Tree &copy; <span id="datestamp">March 2021</span></span>
   </footer>
+
+  <script src="../assets/scripts/family/go.js"></script>
+  <script src="../assets/scripts/family/data.js"></script>
+  <script src="../assets/scripts/family/main.js"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177356457-1"></script>
@@ -45,22 +39,6 @@
 
     gtag('config', 'UA-177356457-1');
   </script>
-
-  <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
-
-  <script src="../assets/scripts/family/primitives.js"></script>
-
-  <script src="../assets/scripts/family/utils.js"></script>
-  <script src="../assets/scripts/family/configs.js"></script>
-
-  <script src="../assets/scripts/family/preprocess.js"></script>
-  <script src="../assets/scripts/family/template.js"></script>
-  <script src="../assets/scripts/family/filter.js"></script>
-
-  <script src="../assets/scripts/family/main.js"></script>
 </body>
 
 </html>
