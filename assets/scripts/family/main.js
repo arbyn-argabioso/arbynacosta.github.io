@@ -57,13 +57,13 @@ tree.nodeTemplate = $(
       margin: new go.Margin(0.5, 0, 0, 0)
     },
     new go.Binding("source", function(nodeData) {
-      if (nodeData.image) {
-        return nodeData.image;
+      if (nodeData.hasImage) {
+        return '../assets/images/family/' + nodeData.key + '.jpg';
       }
       if (nodeData.gender.toUpperCase() == 'M') {
-        return 'https://raw.githubusercontent.com/arbynacosta/arbynacosta.github.io/master/assets/images/family/male.png';
+        return '../assets/images/family/male.png';
       }
-      return 'https://raw.githubusercontent.com/arbynacosta/arbynacosta.github.io/master/assets/images/family/female.png';
+      return '../assets/images/family/female.png';
     })
   ),
   $(
