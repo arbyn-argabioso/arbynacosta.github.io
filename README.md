@@ -17,10 +17,8 @@ A quick portfolio I made when I was applying as freelancer back in 2017. You can
 
 ## Online Family Tree
 
-[![Family Tree Badge](https://img.shields.io/badge/Family%20Tree-Online-brightgreen)](http://arbynacosta.github.com/family) [![HTML5 Validator Badge](https://img.shields.io/badge/HTML5%20Validator-Failed-red)](#)
+[![Family Tree Badge](https://img.shields.io/badge/Family%20Tree-Online-brightgreen)](http://arbynacosta.github.com/family) [![HTML5 Validator Badge](https://img.shields.io/badge/HTML5%20Validator-Passed-brightgreen)](#)
 
-Due to some of my relatives and friends passing away these past few years, I've decided to remember them by creating this family tree web page that dynamically changes based on the available [data provided](https://api.jsonbin.io/b/5e58ed5b09ac43054813b795/latest). You can visit the live webpage on <a href="https://arbynacosta.github.com/family?q=arbyn" target="_blank">https://arbynacosta.github.com/family</a>.
-
-> :star: The current version of my online Family Tree also **includes extended members from my friends**.
+Due to some of my relatives and friends passing away these past few years, I've decided to remember them by creating this family tree web page that dynamically changes based on the available data provided. You can visit the live webpage on <a href="https://arbynacosta.github.com/family?q=arbyn" target="_blank">https://arbynacosta.github.com/family</a>.
 
 <img src="assets/images/readme/family-screenshot.png" style="border: 1px solid rgba(0, 0, 0, 0.15); border-radius: 4px;" />
