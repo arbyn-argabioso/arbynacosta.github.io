@@ -58,7 +58,7 @@ tree.nodeTemplate = $(
     },
     new go.Binding("source", function(nodeData) {
       if (nodeData.hasImage) {
-        return '../assets/images/family/' + nodeData.key + '.jpg';
+        return '../assets/images/family/' + nodeData.key + '.png';
       }
       if (nodeData.gender.toUpperCase() == 'M') {
         return '../assets/images/family/male.png';

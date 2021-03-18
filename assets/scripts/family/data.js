@@ -15,7 +15,7 @@ const TREE_DATA = [
         { key: "GHBD-7M4",         parent: "GQJK-G8W", name: { first: "Manuel",    middle: "San Agustin", last: "Acosta Jr."  }, gender: "M", lifespan: "1948 — 1979",     hasImage: true  },
           { key: "GHBD-9L6",       parent: "GHBD-7M4", name: { first: "Manuel",    middle: "Bongco",      last: "Acosta Sr."  }, gender: "M", lifespan: "1913 — 1994",     hasImage: true  },
             { key: "GHB8-SQN",     parent: "GHBD-9L6", name: { first: "Ligorio",   middle: "",            last: "Acosta"      }, gender: "M", lifespan: "1871 — 1948",     hasImage: false },
-            { key: "GHB8-5K8",     parent: "GHBD-9L6", name: { first: "Maximiana", middle: "",            last: "Bongco"      }, gender: "F", lifespan: "Deceased",        hasImage: false },
+            { key: "GHB8-5K8",     parent: "GHBD-9L6", name: { first: "Maxinana",  middle: "",            last: "Bongco"      }, gender: "F", lifespan: "Deceased",        hasImage: false },
           { key: "GHB8-DXY",       parent: "GHBD-7M4", name: { first: "Natividad", middle: "Villacorta",  last: "San Agustin" }, gender: "F", lifespan: "1925 — 2008",     hasImage: true  },
             { key: "GHB8-LCC",     parent: "GHB8-DXY", name: { first: "Vicente",   middle: "",            last: "San Agustin" }, gender: "M", lifespan: "Deceased",        hasImage: false },
             { key: "GHB8-H7K",     parent: "GHB8-DXY", name: { first: "Nena",      middle: "",            last: "Villacorta"  }, gender: "F", lifespan: "Deceased",        hasImage: false },
