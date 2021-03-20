@@ -2,7 +2,7 @@
 const subtractor = 2;
 const node = {
   margin: 10 - subtractor,
-  height: 52 - subtractor,
+  height: 51 - subtractor,
   width: 245 - (subtractor * 2),
   background: '#ffffff'
 }
@@ -82,7 +82,7 @@ tree.nodeTemplate = $(
     go.TextBlock,
     {
       font: "700 14px Google Sans, sans-serif",
-      margin: new go.Margin(node.margin + 1, node.margin, 0, node.height + node.margin + 4),
+      margin: new go.Margin(node.margin + 1, node.margin, 0, node.height + node.margin + 5),
       maxSize: new go.Size(node.width - node.height, 24)
     },
     new go.Binding("text", function(nodeData) {
@@ -102,7 +102,7 @@ tree.nodeTemplate = $(
     go.TextBlock,
     {
       font: "400 12px Roboto, sans-serif",
-      margin: new go.Margin(25 + parseInt(node.margin / 2), node.margin, node.margin, node.height + node.margin + 4),
+      margin: new go.Margin(24 + parseInt(node.margin / 2), node.margin, node.margin, node.height + node.margin + 5),
       maxSize: new go.Size(node.width - node.height, 24)
     },
     new go.Binding("text", function(nodeData) {
