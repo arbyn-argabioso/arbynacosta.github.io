@@ -21,7 +21,7 @@ const TREE_DATA = [
             { key: "GHB8-H7K",     parent: "GHB8-DXY", name: { first: "Nena",      middle: "",            last: "Villacorta"  }, gender: "F", lifespan: "Deceased",        hasImage: false },
         { key: "GHB8-J1B",         parent: "GQJK-G8W", name: { first: "Catalina",  middle: "Dumantay",    last: "Maramba"     }, gender: "F", lifespan: "1943 — 1974",     hasImage: true  },
           { key: "GHB8-GB6",       parent: "GHB8-J1B", name: { first: "Sotero",    middle: "Reyes",       last: "Maramba Sr." }, gender: "M", lifespan: "Deceased",        hasImage: false },
-            { key: "LLQS-641",     parent: "GHB8-GB6", name: { first: "Miguel",    middle: "Bautista",    last: "Maramba"     }, gender: "M", lifespan: "1858 — Deceased", hasImage: false },
+            { key: "LLQS-641",     parent: "GHB8-GB6", name: { first: "Miguel",    middle: "Bautista",    last: "Maramba"     }, gender: "M", lifespan: "1858 — Deceased", hasImage: true  },
               { key: "LLQS-6YC",   parent: "LLQS-641", name: { first: "Guillermo", middle: "Bautista",    last: "Maramba"     }, gender: "M", lifespan: "Deceased",        hasImage: false },
               { key: "L281-614",   parent: "LLQS-641", name: { first: "Maria",     middle: "Garcia" ,     last: "Bautista"    }, gender: "F", lifespan: "Deceased",        hasImage: false },
                 { key: "GC7T-H59", parent: "L281-614", name: { first: "Agustin",   middle: "",            last: "Bautista"    }, gender: "M", lifespan: "Deceased",        hasImage: false },
