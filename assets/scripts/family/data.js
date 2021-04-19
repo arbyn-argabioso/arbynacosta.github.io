@@ -27,7 +27,7 @@ const TREE_DATA = [
                 { key: "GC7T-H59", parent: "L281-614", name: { first: "Agustin",   middle: "",            last: "Bautista"    }, gender: "M", lifespan: "Deceased",        hasImage: false },
                 { key: "GC7T-1PK", parent: "L281-614", name: { first: "Felipa",    middle: "",            last: "Garcia"      }, gender: "F", lifespan: "Deceased",        hasImage: false },
             { key: "LLQS-6F1",     parent: "GHB8-GB6", name: { first: "Mercedes",  middle: "Novilla",     last: "Reyes"       }, gender: "F", lifespan: "Deceased",        hasImage: false },
-          { key: "GHBD-9LY",       parent: "GHB8-J1B", name: { first: "Cresencia", middle: "",            last: "Dumantay"    }, gender: "F", lifespan: "Deceased",        hasImage: false },
+          { key: "GHBD-9LY",       parent: "GHB8-J1B", name: { first: "Cresencia", middle: "",            last: "Dumantay"    }, gender: "F", lifespan: "Deceased",        hasImage: true  },
     { key: "GHB5-TWN",             parent: "GQX8-000", name: { first: "Mitchie",   middle: "Ajesta",      last: "Adanza"      }, gender: "F", lifespan: "1994 — Living",   hasImage: true  },
       { key: "GHB5-XTZ",           parent: "GHB5-TWN", name: { first: "Darne",     middle: "Elican",      last: "Adanza"      }, gender: "M", lifespan: "1964 — Living",   hasImage: true  },
         { key: "GH12-SVQ",         parent: "GHB5-XTZ", name: { first: "Nestor",    middle: "Ladera",      last: "Adanza"      }, gender: "M", lifespan: "— 2018",          hasImage: true  },
