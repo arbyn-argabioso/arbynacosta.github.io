@@ -10,7 +10,6 @@ html {
   overflow-y: scroll;
   font-size: 12px;
   width: 100%;
-  zoom: 0.66;
 }
 
 body {
@@ -21,12 +20,11 @@ body {
   font-weight: 400;
   letter-spacing: .2px;
   line-height: 18px;
-  padding-bottom: 15px;
 }
 
 h4 {
   font-size: 16px;
-  letter-spacing: .2px;
+  letter-spacing: .1px;
   line-height: 18px;
 }
 
@@ -62,7 +60,7 @@ h1, h2, h3, h4, h5 {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: unset;
   display: block;
-  font-size: 28px;
+  font-size: 26px;
   letter-spacing: 0;
   line-height: 30px;
   margin-bottom: 9px;
@@ -115,12 +113,16 @@ h1, h2, h3, h4, h5 {
 }
 
 .resume__programming-languages li {
+  background-color: #e0e0e0;
+  border-radius: 16px;
   direction: rtl;
   display: inline-flex;
-  padding: 7px 12px;
-  border-radius: 16px;
-  background-color: #e0e0e0;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .25px;
   margin: 0 2px 4px;
+  padding: 7px 12px;
 }
 
 .resume__programming-languages li:first-of-type {
@@ -141,7 +143,7 @@ h1, h2, h3, h4, h5 {
 
 .resume__content-section > header > h3,
 .resume__content-section > header > h4 {
-  color: #1a73e8;
+  color: #4285f4;
   padding-bottom: 12px;
 }
 
@@ -153,7 +155,7 @@ h1, h2, h3, h4, h5 {
 .resume__content-section {
   border-bottom: 1px solid #dadce0;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 22px;
   padding-bottom: 8px;
 }
 
@@ -171,12 +173,16 @@ h1, h2, h3, h4, h5 {
 }
 
 .resume__content-section div > header p {
+  font-size: 16px;
   width: 70%;
   word-break: break-word;
 }
 
-.resume__content-section div > div > header p {
-  font-weight: 600;
+.resume__content-section div > div > header p,
+.resume__content-section > div > header p {
+  color: #111;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
 }
 
 .resume__content-section div > div header > p {
@@ -202,7 +208,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .resume__content-section li {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   text-indent: -16px;
 }
 
@@ -219,16 +225,22 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
 }
 
+.resume__content-section:last-of-type {
+  padding-bottom: 15px;
+}
+
 .resume__entry-datetime {
   font-weight: inherit;
-  font-size: inherit;
+  font-size: 16px;
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.resume__content-section div > div > header p + .resume__entry-datetime {
-  font-weight: 600;
+.resume__entry-datetime {
+  color: #111;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 500;
 }
 
 .resume__note,
@@ -243,18 +255,19 @@ h1, h2, h3, h4, h5 {
 /*
  * Mobile-friendly media setup.
  */
-@media screen and (min-width: 340px) { html { zoom: 0.708; } }
-@media screen and (min-width: 360px) { html { zoom: 0.750; } }
-@media screen and (min-width: 380px) { html { zoom: 0.791; } }
-@media screen and (min-width: 400px) { html { zoom: 0.833; } }
-@media screen and (min-width: 420px) { html { zoom: 0.875; } }
-@media screen and (min-width: 440px) { html { zoom: 0.916; } }
-@media screen and (min-width: 460px) { html { zoom: 0.958; } }
-@media screen and (min-width: 480px) { html { zoom: 1.000; } }
 
 @media screen and (min-width: 800px), print {
   body {
     padding-bottom: 0;
+  }
+
+  .resume__content-section {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .resume__content-section li {
+    margin-bottom: 0;
   }
 
   .hide-sm {
@@ -265,7 +278,9 @@ h1, h2, h3, h4, h5 {
 @media screen and (min-width: 1060px), print {
   .resume {
     border-radius: 3px;
-    box-shadow: 0 1px 6px rgba(60, 64, 67, 0.28);
+      border-color: transparent;
+    -webkit-box-shadow: 0 1px 2px rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+    box-shadow: 0 1px 2px rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
     margin: 40px auto;
     padding: 0;
     width: 980px;
@@ -311,7 +326,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .resume__content-section div > div header > p {
-    padding-left: 40px;
+    padding-left: 17px;
   }
 
   .resume__content-section ul {
