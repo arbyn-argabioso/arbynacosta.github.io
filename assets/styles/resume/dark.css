@@ -1,0 +1,44 @@
+body.dark,
+.dark .resume {
+    background-color: #202124;
+    color: #bdc1c6;
+}
+
+.dark .resume__content-section > header > h3,
+.dark .resume__content-section > header > h4 {
+    color: #8ab4f8;
+}
+
+.dark .resume__title,
+.dark .resume__content-section div > div > header p,
+.dark .resume__content-section > div > header p,
+.dark .resume__entry-datetime {
+    color: #e8eaed;
+}
+
+.dark .resume__content-section li:before {
+    color: #555a5f;
+}
+
+.dark .resume__header,
+.dark .resume__content-section {
+    border-bottom-color: #323538;
+}
+
+.dark .resume__programming-languages li {
+    background-color: rgba(255, 255, 255, 0.025);
+    border: 1px solid #5f6368;
+}
+
+.dark .resume__content-section:last-of-type,
+.dark .resume__content-section:last-of-type > *:last-child,
+.dark .resume__content-section:last-of-type > *:last-child > *:last-child {
+    border-bottom-color: transparent;
+}
+
+@media screen and (min-width: 1060px) {
+    .dark .resume {
+        border: 1px solid #5f6368;
+        border-radius: 8px;
+    }
+}

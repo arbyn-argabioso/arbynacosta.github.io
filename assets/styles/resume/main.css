@@ -230,17 +230,13 @@ h1, h2, h3, h4, h5 {
 }
 
 .resume__entry-datetime {
-  font-weight: inherit;
+  color: #111;
+  font-family: 'Google Sans', sans-serif;
   font-size: 16px;
+  font-weight: 500;
   position: absolute;
   right: 0;
   top: 0;
-}
-
-.resume__entry-datetime {
-  color: #111;
-  font-family: 'Google Sans', sans-serif;
-  font-weight: 500;
 }
 
 .resume__note,
@@ -326,7 +322,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .resume__content-section div > div header > p {
-    padding-left: 17px;
+    padding-left: 23px;
   }
 
   .resume__content-section ul {
