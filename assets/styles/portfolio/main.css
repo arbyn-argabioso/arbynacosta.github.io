@@ -432,7 +432,7 @@ footer .logo img {
     border-radius: 9px;
     font-size: 1.4rem;
     font-weight: 600;
-    padding: 1.0rem 2.6rem;
+    padding: 13px 18px;
 }
 
 .hero-content a.button {
@@ -496,7 +496,6 @@ footer .logo img {
 }
 
 .personal-block figure::after {
-    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 9px;
     content: '';
     width: 100%;
@@ -850,7 +849,6 @@ footer a:hover {
     .project-description a.button,
     .hero-content a.button {
         font-size: 1.8rem;
-        padding: 1.4rem 3.2rem;
     }
 
     .hero-content a.button {
