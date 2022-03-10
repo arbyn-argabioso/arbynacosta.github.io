@@ -40,11 +40,52 @@ function generateDescription(person)
   'use strict';
 
   let fullname = getFullName(person);
-  let fullBirthDate = getFullLifeRange(person);
-  if (fullBirthDate) {
-    return fullname + ' was born on ' + fullBirthDate + '.';
+  let description = fullname;
+  let fullLifeRange = getFullLifeRange(person);
+
+  let birth = fullLifeRange.birth;
+  if (birth) {
+    birth = birth
+        .replace('Jan', 'of January,')
+        .replace('Feb', 'of February,')
+        .replace('Mar', 'of March,')
+        .replace('Apr', 'of April,')
+        .replace('May', 'of May,')
+        .replace('Jun', 'of June,')
+        .replace('Jul', 'of July,')
+        .replace('Aug', 'of August,')
+        .replace('Sep', 'of September,')
+        .replace('Oct', 'of October,')
+        .replace('Nov', 'of November,')
+        .replace('Dec', 'of December,');
   }
-  return fullname;
+
+  let death = fullLifeRange.death;
+  if (death) {
+    death = death
+        .replace('Jan', 'of January,')
+        .replace('Feb', 'of February,')
+        .replace('Mar', 'of March,')
+        .replace('Apr', 'of April,')
+        .replace('May', 'of May,')
+        .replace('Jun', 'of June,')
+        .replace('Jul', 'of July,')
+        .replace('Aug', 'of August,')
+        .replace('Sep', 'of September,')
+        .replace('Oct', 'of October,')
+        .replace('Nov', 'of November,')
+        .replace('Dec', 'of December,');
+  }
+
+  let isDead = fullLifeRange.isDead;
+
+  if (birth) {
+    description += ' was born on ' + birth;
+  }
+  if (isDead) {
+    description += ' and he died on ' + death;
+  }
+  return description;
 }
 
 /*
@@ -62,7 +103,44 @@ function getFullName(person)
 function getFullLifeRange(person)
 {
   'use strict';
-  return null;
+
+  // Dont't do anything if there are no facts
+  if (!person.facts || person.facts.length == 0) {
+    return '';
+  }
+
+  const birthProperty = 'Birth';
+  const deathProperty = 'Death';
+
+  let birth = null;
+  let death = null;
+  let isDead = false;
+
+  for (let i = 0, imax = person.facts.length; i < imax; i++) {
+    let fact = person.facts[i];
+
+    // Only allow valid year in death, otherwise put empty string
+    if (fact.type.includes(deathProperty)) {
+      isDead = true;
+
+      if (fact.date && fact.date.original) {
+        death = fact.date.original;
+      }
+    }
+
+    // Only allow valid year in birth, otherwise put empty string
+    else if (fact.type.includes(birthProperty)) {
+      if (fact.date && fact.date.original) {
+        birth = fact.date.original;
+      }
+    }
+  }
+
+  return {
+    birth: birth,
+    death: death,
+    isDead: isDead,
+  }
 }
 
 /*
@@ -282,6 +360,9 @@ function addDisplayDetails(persons)
 
     // For hover details
     person.description = generateDescription(person);
+
+
+    console.log(person.description)
   }
 
   return persons;
