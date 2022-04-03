@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .resume__programming-languages li {
-  background-color: #e0e0e0;
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   direction: rtl;
   display: inline-flex;
@@ -143,7 +143,7 @@ h1, h2, h3, h4, h5 {
 
 .resume__content-section > header > h3,
 .resume__content-section > header > h4 {
-  color: #4285f4;
+  color: #1a73e8;
   padding-bottom: 12px;
 }
 
@@ -273,7 +273,7 @@ h1, h2, h3, h4, h5 {
 
 @media screen and (min-width: 1060px), print {
   .resume {
-    border-radius: 3px;
+    border-radius: 8px;
       border-color: transparent;
     -webkit-box-shadow: 0 1px 2px rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
     box-shadow: 0 1px 2px rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
